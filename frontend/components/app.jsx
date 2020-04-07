@@ -2,7 +2,7 @@ import React from "react";
 
 const App = () => (
   <>
-    <h1>StayOnTrack</h1>
+    <h1>Welcome to StayOnTrack</h1>
   </>
 );
 
