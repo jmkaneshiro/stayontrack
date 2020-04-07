@@ -22,10 +22,10 @@ export const login = (user) => dispatch => SessionApiUtil.login(user)
   .then(currentUser => dispatch(receiveCurrentUser(currentUser)), 
   err => dispatch(receiveSessionErrors(err.responseJSON)));
 
-export const logout = () => SessionApiUtil.logout()
+export const logout = () => dispatch => SessionApiUtil.logout()
   .then(() => dispatch(logoutCurrentUser()),
     err => dispatch(receiveSessionErrors(err.responseJSON)));
 
-export const signup = (user) => SessionApiUtil.signup(user)
+export const signup = (user) => dispatch => SessionApiUtil.signup(user)
   .then(currentUser => dispatch(receiveCurrentUser(currentUser)), 
     err => dispatch(receiveSessionErrors(err.responseJSON)));
