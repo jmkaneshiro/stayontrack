@@ -38,19 +38,18 @@ class SessionForm extends React.Component {
   }
 
   render () {
-    const { navLink, formType } = this.props;
-    
+    const { navLink, formType, formDescription } = this.props;
     return (
       <>
       <header>
         <Link to="/">StayOnTrack</Link>
-        <div>{ navLink }</div>
+          {navLink}
       </header>
       <section className="login-form">
-        <h1>{ formType }</h1>
-        <h2>Sign in to continue to StayOnTrack</h2>
+        <h2>{ formType }</h2> 
+        <h3>{formDescription}</h3>
         <form onSubmit={this.handleSubmit}>
-          <label>Sign in as
+          <label>Email
             <input type="text" 
               value={this.state.email}
               onChange={this.update("email")}
