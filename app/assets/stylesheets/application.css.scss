@@ -14,20 +14,136 @@
  *= require_self
  */
 
- .home-banner {
-   background-image: image_url('PivotalBackground.png');
-   width: 100%;
-   height: 300px;
+ .work-in-progress {
+   color: white;
+   width: 370px;
+   height: 140px;
+   vertical-align: bottom;
+   background-color: grey;
+   box-shadow: 0 0 4px 2px rgba(4,4,4,0.15);
+   border-radius: 3px;
+   text-align: left;
+   padding: 32px 24px
+ }
+
+ body {
+   font-family: "open-sans", sans-serif, AppleEmoji, SegoeUIEmoji, EmojiOne;
+ }
+
+@media (max-width: 320px) {
+    .work-in-progress {
+    margin-top: 16px;
+  }
+} 
+
+@media (min-width: 592px) {
+  .page-container {
+    padding: 0 16px;
+    width: 560px;
+  }
+  .work-in-progress {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-container {
+    width: 960px;
+  }
+  .header__link {
+    margin-left: 24px;
+  }
+  .work-in-progress {
+    margin-left: 64px;
+  }
+}
+
+.page-container {
+  margin: 0 auto;
+}
+
+
+ .header {
+   background-color: white;
+   border-bottom: 1px solid #c3d4e5;
+   flex: 0 0 auto;
+ }
+
+ .header-subcontainer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    height: 33px;
+ }
+
+  .header-logo {
+   display: flex;
+   align-items: center;
+ }
+
+//  .home-container{
+//   display: flex;
+//   flex-direction: column;
+//   flex-wrap: nowrap;
+//  }
+ .hero {
+   background-image: image_url("stayontrack-background-home.svg");
+   background-size: 1920px;
+   background-position: center center;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
    justify-content: center;
+   align-items: center;
+   margin: 1px;
  }
 
  .home-banner > h1 {
+   box-sizing: border-box;
+
   font-size: 32px;
   max-height: 200px;
-  margin: auto;
+  margin: 150px;
+  padding: 30px;
+  min-width: 200px;
+  max-width: 400px;
  }
 
+ .section-md > div {
+    display: flex;
+    flex: nowrap;
+    flex-direction: row;
+    justify-content: center;
+ }
+
+ #sign-in-link {
+  background-color: #f39e40;
+  border-radius: 3px;
+  color: #ffffff;
+  text-decoration: none;
+ }
+
+ #sign-up-link {
+  background-color: #5081b2;
+  margin-left: 8px;
+  border-radius: 3px;
+  color: #ffffff;
+  text-decoration: none;
+ }
+
+ .header-info {
+   color: #5081b2;
+ }
+
+ .header-link {
+  font-size: 14px;
+  padding: 4px 8px;
+  position: relative;
+ }
+
+ .header-subcontainer .logo {
+   width: 210px;
+ }
  
