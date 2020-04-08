@@ -1,8 +1,10 @@
 import React from "react";
+import HomeContainer from './home/home_container';
 
 const App = () => (
   <>
-    <h1>Welcome to StayOnTrack</h1>
+    <HomeContainer />
+    <h1>StayOnTrack is changing how teams build software-- one story at a time</h1>
   </>
 );
 
