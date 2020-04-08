@@ -13,7 +13,6 @@ import {
 const App = () => (
   <>
     <HomeContainer />
-    <h1>StayOnTrack is changing how teams build software-- one story at a time</h1>
     <Route path="/signin" component={LoginFormContainer} />
     <Route path="/signup" component={SignUpFormContainer} />
   </>
