@@ -1,9 +1,3 @@
-@media (min-width: 992px) {
-  .header__link {
-    margin-left: 24px;
-  }
-}
-
 .main-nav {
   background-color: white;
   border-bottom: 1px solid #c3d4e5;
@@ -28,4 +22,10 @@
 
 .header-link:last-child {
   margin-left: 8px; 
+}
+
+@media (min-width: 992px) {
+  .header_link {
+    margin-left: 24px;
+  }
 }

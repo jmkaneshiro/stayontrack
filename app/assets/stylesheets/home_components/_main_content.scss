@@ -1,28 +1,4 @@
 // Work in progress elements will neeed to be adjusted later
-@media (max-width: 320px) {
-  .work-in-progress {
-    margin-top: 16px;
-  }
-}
-
-@media (min-width: 592px) {
-  .work-in-progress {
-    margin-top: 16px;
-  }
-}
-
-@media (min-width: 992px) {
-  .work-in-progress {
-    margin-left: 64px;
-  }
-
-  h3.banner-msg {
-    font-size: 24px;
-    line-height: 32px;
-    margin: 0 auto 48px;
-    text-align: center;
-  }
-}
 .work-in-progress {
   color: white;
   width: 370px;
@@ -95,4 +71,30 @@ h3.banner-msg {
   margin: 0 auto 48px;
   text-align: center;
   font-weight: 300;
+}
+
+/* Media Queries */
+@media (max-width: 320px) {
+  .work-in-progress {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 592px) {
+  .work-in-progress {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .work-in-progress {
+    margin-left: 64px;
+  }
+
+  h3.banner-msg {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 auto 48px;
+    text-align: center;
+  }
 }
