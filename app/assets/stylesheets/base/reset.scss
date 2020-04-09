@@ -16,6 +16,10 @@ span, article, footer, time, small {
   background: transparent;
 }
 
+section {
+  display: block;
+}
+
 ol, ul {
   list-style: none;
 }

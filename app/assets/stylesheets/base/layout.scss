@@ -1,5 +1,142 @@
+@media only screen and (min-width: 62rem) {
+  .banner-msg {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 592px) {
+  .page-container {
+    padding: 0 16px;
+    width: 560px;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 auto 48px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 48px;
+    margin-left: auto;
+    text-align: center;
+  }
+  .page-container {
+    width: 960px;
+    margin: 0 auto;
+  }
+  .hero {
+    height: 538px;
+    text-align: center;
+  }
+  .section-md {
+    margin-bottom: 40px;
+  }
+}
+
+html {
+	position: relative;
+	height: 100%;
+}
+
 body {
   margin: 0 auto;
-  font-family: "open-sans", sans-serif, AppleEmoji, SegoeUIEmoji, EmojiOne;
+  font-family: "open-sans", sans-serif, AppleEmoji, SegoeUIEmoji, EmojiOne;;
   font-size: 14px;
 }
+
+a {
+  color: #5081b2;
+  text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.hidden {
+	display: none;
+}
+
+.btn {
+  padding: 4px 8px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.btn-blue {
+  background-color: #5081b2;
+  color: #ffffff;
+}
+
+.btn-orange {
+  background-color: #f39e40;
+  color: #ffffff;
+}
+
+.text-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section-md {
+  margin-bottom: 24px;
+}
+
+/*
+	Font Elements
+*/
+h1 {
+  color: black;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0 0 8px;
+}
+
+h2 {
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0 0 24px;
+}
+
+h3 {
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  margin: 0 0 16px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+
+/*
+	Header Rules
+*/
+
+/*
+	Images
+*/
+
+/*
+	Inputs
+*/
