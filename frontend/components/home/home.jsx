@@ -13,8 +13,8 @@ const Home = ({ currentUser }) => (
             <a className="header-link">Product</a>
             <a className="header-link">Community</a>
             <a href="https://www.pivotaltracker.com/blog" className="header-link">Blog</a>
-            <Link id="sign-in-link" className="header-link btn btn-orange" to="/signin">Sign In</Link>
-            <Link id="sign-up-link" className="header-link btn btn-blue" to="/signup">Sign Up</Link>
+            <Link className="header-link btn btn-orange" to="/login">Log In</Link>
+            <Link className="header-link btn btn-blue" to="/signup">Sign Up</Link>
           </div>
         </div>
       </div>
