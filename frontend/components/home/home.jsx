@@ -23,7 +23,8 @@ const Home = ({ currentUser }) => (
       <section className="hero">
         <div className="text-box">
           <h1 className="hero-heading">
-            StayOnTrack is changing how teams build software-- one story at a time
+            StayOnTrack is changing how teams build software&mdash;
+            <br/> one story at a time
           </h1>
           <div className="work-in-progress">
             Work in progress ...
