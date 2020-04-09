@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 const Home = ({ currentUser }) => (
   <>
+    <a className="global-banner" href="https://content.pivotal.io/blog/pivotal-vmware-transforming-
+    how-more-of-the-world-builds-software">Pivotal + VMware: <span>Transforming how more of the 
+      world builds software -></span></a>
     <nav className="main-nav">
       <div className="page-container">
         <div className="main-nav-container">

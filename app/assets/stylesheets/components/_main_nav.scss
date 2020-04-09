@@ -1,3 +1,23 @@
+a.global-banner span {
+  font-weight: normal;
+}
+
+a.global-banner {
+  display: block;
+  padding: 10px 0;
+  color: white;
+  text-align: center;
+  background: #5081b2;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a.global-banner:hover {
+  color: white;
+  background: #286287;
+}
+
 .main-nav {
   background-color: white;
   border-bottom: 1px solid #c3d4e5;
@@ -9,6 +29,9 @@
   display:flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  height: 33px;
 }
 
 .main-nav-container .logo {
@@ -17,6 +40,7 @@
 
 .header-link {
   padding: 4px 8px;
+  margin: 24px;
   position: relative;
 }
 

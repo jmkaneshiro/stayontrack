@@ -14,8 +14,7 @@
 // Work in progress elements will neeed to be adjusted later
 
 .hero {
-  background-image: image_url("stayontrack-background-home.svg");
-  height: 480px;
+  background-image: image_url("icon-explosion.svg");
   background-position: center center;
   background-size: cover;
   display: flex;
@@ -32,29 +31,16 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
 
-.info-image .info-text {
+.hero-heading .work-in-progress .info-image .info-text {
+  box-sizing: border-box;
   flex-basis: 50%;
   max-width: 50%;
-}
-
-.info {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-}
-
-.info-text {
-  max-width: 480px;
-}
-
-.info-image {
-  width: 519px;
-  height: 389px;
 }
 
 h2.banner-msg {

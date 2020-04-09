@@ -23,47 +23,5 @@
 @import "base/layout.scss";
 
 // Components
-@import "home_components/*";
-
-//  .header-subcontainer {
-//     align-items: center;
-//     display: flex;
-//     justify-content: space-between;
-//     padding-bottom: 16px;
-//     padding-top: 16px;
-//     height: 33px;
-//  }
-
-//   .header-logo {
-//    display: flex;
-//    align-items: center;
-//  }
-
-// //  .home-container{
-// //   display: flex;
-// //   flex-direction: column;
-// //   flex-wrap: nowrap;
-// //  }
-
-//  .home-banner > h1 {
-//    box-sizing: border-box;
-
-//   font-size: 32px;
-//   max-height: 200px;
-//   margin: 150px;
-//   padding: 30px;
-//   min-width: 200px;
-//   max-width: 400px;
-//  }
-
-//  .section-md > div {
-//     display: flex;
-//     flex: nowrap;
-//     flex-direction: row;
-//     justify-content: center;
-//  }
-
-//  .header-subcontainer .logo {
-//    width: 210px;
-//  }
+@import "components/*";
  
