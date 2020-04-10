@@ -102,11 +102,15 @@ h3.banner-msg {
   color: #5081b2;
   display: inline-flex;
   justify-content: space-between;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
   padding: 8px;
   transition: background-color 200ms, color 200ms, border-color 200ms;
 }
+  .arrow-btn {
+    display: none;
+  }
 
 .text-box-btn:hover {
   text-decoration: none;
@@ -153,6 +157,17 @@ h3.banner-msg {
   .hero {
     height: 538px;
     text-align: center;
+  }
+
+  .text-box-btn {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .arrow-btn {
+    display: block;
+    line-height: 32px;
+    margin-left: 4px;
   }
 }
 
