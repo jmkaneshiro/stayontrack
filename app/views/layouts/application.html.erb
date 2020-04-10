@@ -7,16 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <script type="text/javascript">
-      window.logoURL = "<%= image_url('StayOnTrackLogo.svg') %>";
-      window.workingTogether1URL = "<%= image_url('working_together-1.svg') %>";
-      window.workingTogether2URL = "<%= image_url('working_together-2.svg') %>";
-      window.workingTogether3URL = "<%= image_url('working_together-3.svg') %>";
-    </script>
   </head>
 
   <body>
     <%= yield %>
   </body>
+  <script type="text/javascript">
+    window.logoURL = "<%= image_url('StayOnTrackLogo.svg') %>";
+    window.workingTogether1URL = "<%= image_url('working_together-1.svg') %>";
+    window.workingTogether2URL = "<%= image_url('working_together-2.svg') %>";
+    window.workingTogether3URL = "<%= image_url('working_together-3.svg') %>";
+  </script>
 </html>
 

@@ -29,7 +29,7 @@ class SessionForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li key={`error-${i}`} className="auth-error">
             {error}
           </li>
         ))}
@@ -42,28 +42,46 @@ class SessionForm extends React.Component {
     return (
       <>
       <header>
-        <Link to="/">StayOnTrack</Link>
-          {navLink}
+          <div className="page-container">
+            <div className="main-nav-container">
+              <Link to="/">
+                <img src={window.logoURL} alt="Logo" className="logo" />
+              </Link>
+              {navLink}
+            </div>
+          </div>
       </header>
-      <section className="login-form">
-        <h2>{ formType }</h2> 
-        <h3>{formDescription}</h3>
-        <form onSubmit={this.handleSubmit}>
-          <label>Email
-            <input type="text" 
-              value={this.state.email}
-              onChange={this.update("email")}
-            />
-          </label>
-          <label>Password
-            <input type="password" 
-              value={this.state.password} 
-              onChange={this.update("password")}
-            />
-          </label>
-          <input type="submit" value={ formType } />
-        </form>
+      <section className="gray-background">
+          <div className="auth-form-container">
+            <div className="auth-form-box">
+              <div className="auth-form">
+                <h2 className="auth-title">{formType}</h2>
+                <h3 className="auth-message">{formDescription}</h3>
+                <form onSubmit={this.handleSubmit}>
+                  {this.renderErrors()}
+                  <label className="auth-input-label">Email
+                <input type="text"
+                      className="auth-input-field"
+                      value={this.state.email}
+                      onChange={this.update("email")}
+                    />
+                  </label>
+                  <label className="auth-input-label">Password
+                <input type="password"
+                      className="auth-input-field"
+                      value={this.state.password}
+                      onChange={this.update("password")}
+                    />
+                  </label>
+                  <input type="submit" className="auth-submit" value={formType} />
+                </form>
+              </div>
+            </div>
+        </div>
       </section>
+      <footer className="auth-footer">
+
+      </footer>
       </>
     );
   }
