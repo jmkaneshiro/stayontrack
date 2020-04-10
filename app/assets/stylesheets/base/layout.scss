@@ -13,10 +13,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
 .hidden {
 	display: none;
 }
@@ -27,9 +23,17 @@ a:hover {
   text-decoration: none;
 }
 
+.btn:hover {
+  text-decoration: none;
+}
+
 .btn-blue {
   background-color: #5081b2;
   color: #ffffff;
+}
+
+.btn-blue:hover {
+  background-color: #286287;
 }
 
 .btn-white {
@@ -41,6 +45,10 @@ a:hover {
 .btn-orange {
   background-color: #f39e40;
   color: #ffffff;
+}
+
+.btn-orange:hover {
+  background-color: #ee7d00;
 }
 
 .gray-background {

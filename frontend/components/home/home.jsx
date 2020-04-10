@@ -131,17 +131,24 @@ const Home = ({ currentUser }) => (
           </div>
         </div>
       </section>
-      {/* <section className="section-md">
+      <section className="section-md">
         <div>
-          <h2>A better way to develop</h2>
-          <p>
+          <h2 className="banner-msg">A better way to develop</h2>
+          <h3 className="banner-msg">
             Succeeding in an evolving tech landscape requires a time-tested process and a tool your team can 
             rely on. Tracker's modern workflow helps your team keep the pace and adapt when needs change.
-          </p>
+          </h3>
         </div>
-        <a className="text-box-btn">Learn how Tracker can help your team -></a>
+        <div className="text-box">
+          <a className="text-box-btn" href="https://www.pivotaltracker.com/features" target="_blank">
+            Learn how Tracker can help your team
+          <span>
+              <img src={window.buttonArrowURL} alt="Arrow pointing to next page" />
+            </span>
+          </a>
+        </div>
       </section>
-      <section className="section-md">
+      {/* <section className="section-md">
         <h2>Ready to get your team on track? Try us free for 30 days.</h2>
         <a className="signup-block-btn">Get started!</a>
       </section>

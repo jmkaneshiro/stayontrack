@@ -96,9 +96,32 @@ h3.banner-msg {
   flex-wrap: wrap;
 }
 
-@media (max-width: 592px) {
+.text-box-btn {
+  background-color: #ffffff;
+  border: 1px solid #5081b2;
+  color: #5081b2;
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 24px;
+  line-height: 32px;
+  padding: 8px;
+  transition: background-color 200ms, color 200ms, border-color 200ms;
+}
 
-  .info:nth-of-type(1) {
+.text-box-btn:hover {
+  text-decoration: none;
+  background-color: #edf2f7;
+  color: #5081b2;
+}
+
+// Media Queries
+
+@media (max-width: 592px) {
+  .info-image {
+    order: 1;
+  }
+  
+  .info {
     flex-direction: column;
   }
 
