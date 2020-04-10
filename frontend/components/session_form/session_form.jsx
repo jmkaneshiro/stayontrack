@@ -29,7 +29,7 @@ class SessionForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li key={`error-${i}`} className="auth-error">
             {error}
           </li>
         ))}
@@ -58,6 +58,7 @@ class SessionForm extends React.Component {
                 <h2 className="auth-title">{formType}</h2>
                 <h3 className="auth-message">{formDescription}</h3>
                 <form onSubmit={this.handleSubmit}>
+                  {this.renderErrors()}
                   <label className="auth-input-label">Email
                 <input type="text"
                       className="auth-input-field"

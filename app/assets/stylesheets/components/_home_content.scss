@@ -1,0 +1,143 @@
+// Work in progress elements will neeed to be adjusted later
+.work-in-progress {
+  color: white;
+  width: 370px;
+  height: 140px;
+  vertical-align: bottom;
+  background-color: grey;
+  box-shadow: 0 0 4px 2px rgba(4,4,4,0.15);
+  border-radius: 3px;
+  text-align: left;
+  padding: 32px 24px
+} 
+
+// Work in progress elements will neeed to be adjusted later
+
+.hero {
+  background-image: image_url("icon-explosion.svg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 376px;
+}
+
+.hero-heading {
+  max-width: 480px;
+  text-align: left;
+}
+
+.info-text > h3 {
+  color: #242424;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 32px;
+  margin: 0 0 16px;
+}
+
+.info-text > p {
+  color: #4a4a4a;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+
+.info-text > p > strong {
+  font-weight: bold;
+}
+.info {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  // flex: 0 1 auto;
+}
+
+.info-image, .info-text {
+  // flex: 1 1 0;
+  flex: 50%;
+}
+
+h2.banner-msg {
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+h3.banner-msg {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 auto 48px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.page-container {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.section-md {
+  margin-bottom: 24px;
+}
+
+.text-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 592px) {
+  .info {
+    flex-direction: column;
+  }
+  .hero .page-container {
+    margin-top: 200px;
+    margin-bottom: 80px;
+  }
+}
+
+// @media (min-width: 592px) {
+//   .page-container {
+//     padding: 0 16px;
+//     width: 560px;
+//   }
+//   .hero {
+//   height: auto;
+//   }
+// }
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .info .info__image {
+  max-height: 330px;
+  }
+  .page-container {
+  width: 960px;
+  }
+  .section-md {
+    margin-bottom: 40px;
+  }
+  .hero .page-container {
+    margin-top: 148px;
+    margin-bottom: 148px;
+  }
+  .hero {
+    height: 538px;
+    text-align: center;
+  }
+}
+

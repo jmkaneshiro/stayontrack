@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = ({ currentUser }) => (
   <>
     <a className="global-banner" href="https://content.pivotal.io/blog/pivotal-vmware-transforming-
-    how-more-of-the-world-builds-software">Pivotal + VMware: <span>Transforming how more of the 
+    how-more-of-the-world-builds-software">StayOnTrack + VMware: <span>Transforming how more of the 
       world builds software -></span></a>
     <nav className="main-nav">
       <div className="page-container">
@@ -24,13 +24,15 @@ const Home = ({ currentUser }) => (
     </nav>
     <div className="home-container">
       <section className="hero">
-        <div className="text-box">
-          <h1 className="hero-heading">
-            StayOnTrack is changing how teams build software&mdash;
-            <br/> one story at a time
+        <div className="page-container">
+          <div className="text-box">
+            <h1 className="hero-heading">
+              StayOnTrack is changing how teams build software&mdash;
+            <br /> one story at a time
           </h1>
-          <div className="work-in-progress">
-            Work in progress ...
+            <div className="work-in-progress">
+              Work in progress ...
+          </div>
           </div>
         </div>
       </section>
@@ -48,7 +50,7 @@ const Home = ({ currentUser }) => (
       <section className="section-md">
         <div className="page-container">
           <div className="info">
-            <div className="info-text">
+            <div id="info1" className="info-text">
               <h3>Better organization to get focused</h3>
               <p>
                 <strong>Keep your team on the rails.</strong>Tracker's shared backlog makes priorities clear
