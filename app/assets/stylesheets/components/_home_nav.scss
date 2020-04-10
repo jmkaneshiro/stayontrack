@@ -38,20 +38,105 @@ a.global-banner:hover {
   width: 210px;
 }
 
-.header-link {
-  font-size: 14px;
-  padding: 4px 8px;
-  margin-left: 24px;
-  position: relative;
+.main-nav-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.header-link:last-child {
+.main-nav-options .main-nav-dropdown, .main-nav-options .header-link {
+  color: #5081b2;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+.main-nav-options > li:last-child {
   margin-left: 8px; 
   margin-right: 0px;
 }
 
+// Dropdown Menu
+.main-nav-dropdown {
+  position: relative;
+}
+
+.main-nav-dropdown > span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dropdown-arrow {
+  height: 16px;
+  margin-left: 4px;
+  width: 16px;
+}
+
+.main-nav-dropdown > ul {
+  position:absolute;
+  background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 12px #4a4a4a;
+  top: 55px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav-dropdown > ul li {
+  overflow: hidden;
+  height: 0;
+  transition: height 100ms linear 250ms;
+}
+
+.main-nav-dropdown:hover > ul li {
+  height: 35px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 35px;
+  margin: 8px;
+  width: 85%;
+}
+
+.main-nav-dropdown > ul li:hover {
+  background-color: #c3d4e5;
+  border-radius: 4px;
+  color: #5081b2; 
+  margin: 8px;
+}
+
+//Hamburger menu
+
+// Media Queries
+
 @media (min-width: 992px) {
-  .header-link {
-    margin-left: 24px;
+  .menu-md {
+    display: none;
+  }
+  .main-nav-dropdown > ul {
+    left: -16px;
+    top: 51px;
+    width: 192px;
+  }
+
+  .main-nav-dropdown > ul li {
+    line-height: 20px;
+    text-align: left;
+    vertical-align: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu-lg {
+    display: none;
+  }
+  .main-nav-dropdown > ul {
+    width: 85vw;
+    right: 20px;
+  }
+  .main-nav-dropdown > ul li {
+    margin: 0 8;
   }
 }

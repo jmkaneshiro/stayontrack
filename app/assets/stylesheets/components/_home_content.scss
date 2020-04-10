@@ -14,7 +14,7 @@
 // Work in progress elements will neeed to be adjusted later
 
 .hero {
-  background-image: image_url("icon-explosion.svg");
+  background-image: image_url("marketing/icon-explosion.svg");
   background-position: center center;
   background-size: cover;
   display: flex;
@@ -30,7 +30,7 @@
 
 .info-text > h3 {
   color: #242424;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 32px;
   margin: 0 0 16px;
@@ -38,7 +38,7 @@
 
 .info-text > p {
   color: #4a4a4a;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   margin: 0 0 24px;
 }
@@ -97,24 +97,16 @@ h3.banner-msg {
 }
 
 @media (max-width: 592px) {
-  .info {
+
+  .info:nth-of-type(1) {
     flex-direction: column;
   }
+
   .hero .page-container {
     margin-top: 200px;
     margin-bottom: 80px;
   }
 }
-
-// @media (min-width: 592px) {
-//   .page-container {
-//     padding: 0 16px;
-//     width: 560px;
-//   }
-//   .hero {
-//   height: auto;
-//   }
-// }
 
 @media (min-width: 992px) {
   h1 {
