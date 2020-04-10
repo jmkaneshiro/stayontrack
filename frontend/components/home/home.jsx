@@ -150,13 +150,20 @@ const Home = ({ currentUser }) => (
           </div>
         </div>
       </section>
-      {/* <section className="section-md">
-        <h2>Ready to get your team on track? Try us free for 30 days.</h2>
-        <a className="signup-block-btn">Get started!</a>
+      <section className="section-md">
+        <div className="page-container">
+          <div className="signup-block">
+            <h2 className="banner-msg">Ready to get your team on track? Try us free for 30 days.</h2>
+            <Link to="/signup" className="btn btn-orange signup-block-btn">Get started!</Link>
+          </div>
+        </div>
       </section>
       <section className="section-md">
-        computer image goes here
-      </section> */}
+        <div className="page-container">
+          <img src={window.appPlatformsURL} alt="Illustration showing Pivotal Tracker 
+            mobile apps for iOS and Android"/>
+        </div>
+      </section>
     </div>
   </>
 
