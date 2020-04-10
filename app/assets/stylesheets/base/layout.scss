@@ -10,8 +10,6 @@ body {
 }
 
 a {
-  color: #5081b2;
-  font-family: "open-sans", sans-serif, AppleEmoji, SegoeUIEmoji, EmojiOne;
   text-decoration: none;
 }
 
@@ -32,6 +30,12 @@ a:hover {
 .btn-blue {
   background-color: #5081b2;
   color: #ffffff;
+}
+
+.btn-white {
+  background-color: white;
+  color: #5081b2;
+  border: 1px solid #5081b2;
 }
 
 .btn-orange {

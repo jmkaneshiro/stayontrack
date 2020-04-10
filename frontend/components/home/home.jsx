@@ -12,12 +12,48 @@ const Home = ({ currentUser }) => (
           <Link to="/">
             <img src={window.logoURL} alt="Logo" className="logo" />
           </Link>
-          <div className="header-links">
-            <a className="header-link">Product</a>
-            <a className="header-link">Community</a>
-            <a href="https://www.pivotaltracker.com/blog" className="header-link">Blog</a>
-            <Link className="header-link btn btn-orange" to="/login">Log In</Link>
-            <Link className="header-link btn btn-blue" to="/signup">Sign Up</Link>
+          <ul className="main-nav-options">
+            <li>
+              <div className="main-nav-dropdown menu-lg">
+                <span>Product <img className="dropdown-arrow" src={window.arrowSmallDropdownURL} alt="Dropdown arrow"/> </span>
+                <ul>
+                  <li><a href="https://www.pivotaltracker.com/features" target="_blank" className="header-link">Features</a></li>
+                  <li><a href="https://www.pivotaltracker.com/pricing" target="_blank" className="header-link">Pricing</a></li>
+                  <li><a href="https://www.pivotaltracker.com/integrations" target="_blank" className="header-link">Integrations</a></li>
+                  <li><a href="https://www.pivotaltracker.com/enterprise" target="_blank" className="header-link">Enterprise</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div className="main-nav-dropdown menu-lg">
+                <span>Community <img className="dropdown-arrow" src={window.arrowSmallDropdownURL} alt="Dropdown arrow" /></span>
+                <ul>
+                  <li><a href="https://www.pivotaltracker.com/events" target="_blank" className="header-link">Events</a></li>
+                  <li><a href="https://www.pivotaltracker.com/buildtv" target="_blank" className="header-link">BuildTV</a></li>
+                  <li><a href="https://www.pivotaltracker.com/customer-stories" target="_blank" className="header-link">Customer Stories</a></li>
+                  <li><a href="https://www.pivotaltracker.com/consultancies" target="_blank" className="header-link">Consultancy Directory</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="https://www.pivotaltracker.com/" target="_blank" className="header-link menu-lg">Learn More About: Pivotal Tracker</a>
+            </li>
+            <li><Link className="btn btn-orange" to="/login">Log In</Link></li>
+            <li><Link className="btn btn-blue" to="/signup">Sign Up</Link></li>
+          </ul>
+            <div className="main-nav-dropdown arrow-down btn btn-white menu-md">
+              <span>Menu<img className="dropdown-arrow" src={window.arrowSmallDropdownURL} alt="Dropdown arrow" /></span>
+            <ul>
+              <li><a href="https://www.pivotaltracker.com/features" target="_blank" className="header-link">Features</a></li>
+              <li><a href="https://www.pivotaltracker.com/pricing" target="_blank" className="header-link">Pricing</a></li>
+              <li><a href="https://www.pivotaltracker.com/integrations" target="_blank" className="header-link">Integrations</a></li>
+              <li><a href="https://www.pivotaltracker.com/enterprise" target="_blank" className="header-link">Enterprise</a></li>
+              <li><a href="https://www.pivotaltracker.com/" target="_blank" className="header-link">Learn More About: Pivotal Tracker</a></li>
+              <li><a href="https://www.pivotaltracker.com/events" target="_blank" className="header-link">Events</a></li>
+              <li><a href="https://www.pivotaltracker.com/buildtv" target="_blank" className="header-link">BuildTV</a></li>
+              <li><a href="https://www.pivotaltracker.com/customer-stories" target="_blank" className="header-link">Customer Stories</a></li>
+              <li><a href="https://www.pivotaltracker.com/consultancies" target="_blank" className="header-link">Consultancy Directory</a></li>
+            </ul>
           </div>
         </div>
       </div>
