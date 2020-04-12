@@ -64,11 +64,21 @@ const Home = ({ currentUser }) => (
           <div className="text-box">
             <h1 className="hero-heading">
               StayOnTrack is changing how teams build software&mdash;
-            <br /> one story at a time
-          </h1>
-            <div className="work-in-progress">
-              Work in progress ...
-          </div>
+              <br /> one story at a time
+            </h1>
+            <div className="signup-form-home-container">
+              <div className="signup-form-home-box">
+                <h2>Get Started Today!</h2>
+                <form className="signup-form-home">
+                  <label htmlFor="email">Sign up with your email</label>
+                  <input type="email" placeholder="email@domain.com" name="email" className="signup-email" />
+                  <input type="submit" value="Get Started!" />
+                </form>
+                <div className="google-sign-in">
+                  or <a>Sign up with Google</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -153,8 +163,8 @@ const Home = ({ currentUser }) => (
       <section className="section-md">
         <div className="page-container">
           <div className="signup-block">
-            <h2 className="banner-msg">Ready to get your team on track? Try us free for 30 days.</h2>
-            <Link to="/signup" className="btn btn-orange signup-block-btn">Get started!</Link>
+            <h2 className="banner-msg">Ready to get your team on track? Test it out for yourself.</h2>
+            <Link to="/signup" className="btn btn-orange signup-block-btn">Demo Log In</Link>
           </div>
         </div>
       </section>
