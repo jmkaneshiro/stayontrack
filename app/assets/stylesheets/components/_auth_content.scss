@@ -71,6 +71,11 @@
   line-height: 62px;
   padding-right: 12px;
   font-size: 100%;
+  min-width: 255px;
+}
+
+.signup-signin-redirect > a {
+  color: #426FA0;
 }
 
 .auth-submit {

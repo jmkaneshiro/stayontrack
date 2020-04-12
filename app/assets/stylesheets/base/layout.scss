@@ -7,14 +7,11 @@ body {
   margin: 0 auto;
   font-family: "open-sans", sans-serif, AppleEmoji, SegoeUIEmoji, EmojiOne;;
   font-size: 14px;
+  color: #4a4a4a;
 }
 
 a {
   text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
 }
 
 .hidden {
@@ -27,9 +24,17 @@ a:hover {
   text-decoration: none;
 }
 
+.btn:hover {
+  text-decoration: none;
+}
+
 .btn-blue {
   background-color: #5081b2;
   color: #ffffff;
+}
+
+.btn-blue:hover {
+  background-color: #286287;
 }
 
 .btn-white {
@@ -41,6 +46,10 @@ a:hover {
 .btn-orange {
   background-color: #f39e40;
   color: #ffffff;
+}
+
+.btn-orange:hover {
+  background-color: #ee7d00;
 }
 
 .gray-background {
@@ -93,35 +102,3 @@ p {
 */
 
 /* Media Queries */
-// @media only screen and (min-width: 62rem) {
-//   .banner-msg {
-//     box-sizing: border-box;
-//     flex: 0 0 auto;
-//     padding-left: 16px;
-//     padding-right: 16px;
-//   }
-// }
-
-// @media (min-width: 592px) {
-//   .page-container {
-//     padding: 0 16px;
-//     width: 560px;
-//   }
-// }
-
-// @media (min-width: 992px) {
-//   h2 {
-//     font-size: 24px;
-//     line-height: 32px;
-//     margin: 0 auto 48px;
-//     margin-top: 0px;
-//     margin-right: auto;
-//     margin-bottom: 48px;
-//     margin-left: auto;
-//     text-align: center;
-//   }
-//   .hero {
-//     height: 538px;
-//     text-align: center;
-//   }
-// }

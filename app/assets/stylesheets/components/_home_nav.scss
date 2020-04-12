@@ -56,6 +56,10 @@ a.global-banner:hover {
   margin-right: 0px;
 }
 
+.menu-lg {
+  display: none;
+}
+
 // Dropdown Menu
 .main-nav-dropdown {
   position: relative;
@@ -79,7 +83,8 @@ a.global-banner:hover {
   border-radius: 0 0 4px 4px;
   box-shadow: 0 4px 12px #4a4a4a;
   top: 55px;
-  width: 100%;
+  width: 60vw;
+  right: 20px;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -115,6 +120,10 @@ a.global-banner:hover {
   .menu-md {
     display: none;
   }
+  .menu-lg {
+    display: block;
+  }
+
   .main-nav-dropdown > ul {
     left: -16px;
     top: 51px;
@@ -125,18 +134,5 @@ a.global-banner:hover {
     line-height: 20px;
     text-align: left;
     vertical-align: center;
-  }
-}
-
-@media (max-width: 991px) {
-  .menu-lg {
-    display: none;
-  }
-  .main-nav-dropdown > ul {
-    width: 85vw;
-    right: 20px;
-  }
-  .main-nav-dropdown > ul li {
-    margin: 0 8;
   }
 }

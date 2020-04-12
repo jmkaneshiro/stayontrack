@@ -64,11 +64,21 @@ const Home = ({ currentUser }) => (
           <div className="text-box">
             <h1 className="hero-heading">
               StayOnTrack is changing how teams build software&mdash;
-            <br /> one story at a time
-          </h1>
-            <div className="work-in-progress">
-              Work in progress ...
-          </div>
+              <br /> one story at a time
+            </h1>
+            <div className="signup-form-home-container">
+              <div className="signup-form-home-box">
+                <h2>Get Started Today!</h2>
+                <form className="signup-form-home">
+                  <label htmlFor="email">Sign up with your email</label>
+                  <input type="email" placeholder="email@domain.com" name="email" className="signup-email" />
+                  <input type="submit" value="Get Started!" />
+                </form>
+                <div className="google-sign-in">
+                  or <a>Sign up with Google</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -131,23 +141,39 @@ const Home = ({ currentUser }) => (
           </div>
         </div>
       </section>
-      {/* <section className="section-md">
-        <div>
-          <h2>A better way to develop</h2>
-          <p>
-            Succeeding in an evolving tech landscape requires a time-tested process and a tool your team can 
-            rely on. Tracker's modern workflow helps your team keep the pace and adapt when needs change.
-          </p>
+      <section className="section-md">
+        <div className="page-container">
+          <div>
+            <h2 className="banner-msg">A better way to develop</h2>
+            <h3 className="banner-msg">
+              Succeeding in an evolving tech landscape requires a time-tested process and a tool your team can
+              rely on. Tracker's modern workflow helps your team keep the pace and adapt when needs change.
+          </h3>
+          </div>
+          <div className="text-box">
+            <a className="text-box-btn" href="https://www.pivotaltracker.com/features" target="_blank">
+              Learn how Tracker can help your team
+          <span>
+                <img className="arrow-btn" src={window.buttonArrowURL} alt="Arrow pointing to next page" />
+              </span>
+            </a>
+          </div>
         </div>
-        <a className="text-box-btn">Learn how Tracker can help your team -></a>
       </section>
       <section className="section-md">
-        <h2>Ready to get your team on track? Try us free for 30 days.</h2>
-        <a className="signup-block-btn">Get started!</a>
+        <div className="page-container">
+          <div className="signup-block">
+            <h2 className="banner-msg">Ready to get your team on track? Test it out for yourself.</h2>
+            <Link to="/signup" className="btn btn-orange signup-block-btn">Demo Log In</Link>
+          </div>
+        </div>
       </section>
       <section className="section-md">
-        computer image goes here
-      </section> */}
+        <div className="page-container">
+          <img src={window.appPlatformsURL} alt="Illustration showing Pivotal Tracker 
+            mobile apps for iOS and Android"/>
+        </div>
+      </section>
     </div>
   </>
 
