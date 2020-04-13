@@ -1,3 +1,6 @@
+@import "../base/colors";
+
+
 //Footer
 footer {
   color: black;
@@ -77,8 +80,8 @@ footer {
 }
 
 .signup-form-home > input:last-child {
-  background-color: #5081b2;
-  border-color: #5081b2;
+  background-color:$pivotalBlue;
+  border-color: $pivotalBlue;
   border-style: solid;
   font-size: 16px;
   color: white;
@@ -100,7 +103,7 @@ footer {
 
 .google-sign-in > a {
   display: block;
-  color: #5081b2;
+  color: $pivotalBlue;
   background-image: image_url("marketing/google-sign-in.svg");
   background-repeat: no-repeat;
   padding-left: 22px;
@@ -178,8 +181,8 @@ h3.banner-msg {
 
 .text-box-btn {
   background-color: #ffffff;
-  border: 1px solid #5081b2;
-  color: #5081b2;
+  border: 1px solid $pivotalBlue;
+  color: $pivotalBlue;
   display: inline-flex;
   justify-content: space-between;
   font-size: 16px;
@@ -195,7 +198,7 @@ h3.banner-msg {
 .text-box-btn:hover {
   text-decoration: none;
   background-color: #edf2f7;
-  color: #5081b2;
+  color: $pivotalBlue;
 }
 
 .signup-block {
@@ -226,7 +229,7 @@ footer p {
 }
 
 .footer-info-link .fab, .footer-info-link .far {
-  color: #5081b2;
+  color: $pivotalBlue;
   padding-left: 8px;
 }
 
