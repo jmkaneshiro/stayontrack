@@ -11,8 +11,11 @@ const mapStateToProps = ({ errors }) => ({
   formDescription: "Log In to continue to Pivotal Tracker."
 });
 
-const mapDispatchToProps = dispatch => ({
-  processForm: user => dispatch(login(user))
-});
+const mapDispatchToProps = dispatch => {
+  return {
+    processForm: user => dispatch(login(user)),
+    demoLogin: () => dispatch(login({ email: "demo_user@mailinator.com", password: "password" }))
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);

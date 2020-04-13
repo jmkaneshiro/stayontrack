@@ -38,17 +38,20 @@ class SessionForm extends React.Component {
   }
 
   render () {
-    const { navLink, formType, formDescription } = this.props;
+    const { navLink, formType, formDescription, demoLogin } = this.props;
     return (
       <>
       <header>
           <div className="page-container">
-            <div className="main-nav-container">
+            <nav className="main-nav-container">
               <Link to="/">
                 <img src={window.logoURL} alt="Logo" className="logo" />
               </Link>
-              {navLink}
-            </div>
+              <div className="auth-nav-links">
+                {navLink}
+                <button onClick={demoLogin} className="btn btn-orange">Demo Login</button>
+              </div>
+            </nav>
           </div>
       </header>
       <section className="gray-background">
@@ -79,9 +82,6 @@ class SessionForm extends React.Component {
             </div>
         </div>
       </section>
-      <footer className="auth-footer">
-
-      </footer>
       </>
     );
   }

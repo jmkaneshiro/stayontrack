@@ -1,3 +1,18 @@
+// Navigation
+.auth-nav-links {
+  display: flex;
+  justify-content: right;
+}
+
+.auth-nav-links .btn {
+  margin: 12px 0px;
+}
+
+.signup-signin-redirect > a {
+  color: #426FA0;
+}
+
+//Form
 .auth-form-container {
   max-width: 475px;
   min-height: 470px;
@@ -72,10 +87,6 @@
   padding-right: 12px;
   font-size: 100%;
   min-width: 255px;
-}
-
-.signup-signin-redirect > a {
-  color: #426FA0;
 }
 
 .auth-submit {

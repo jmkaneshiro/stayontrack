@@ -1,11 +1,5 @@
 @import "../base/colors";
 
-
-//Footer
-footer {
-  color: black;
-}
-
 // Hero banner
 .hero {
   background-image: image_url("marketing/icon-explosion.svg");
@@ -201,36 +195,16 @@ h3.banner-msg {
   color: $pivotalBlue;
 }
 
-.signup-block {
+.demo-login {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.signup-block-btn {
+.demo-login-btn {
   font-size: 16px;
   line-height: 24px;
-}
-
-//Footer
-footer {
-  border-top: 1px solid #c3d4e5;
-  padding: 28px 0px;
-  display: flex;
-  justify-content: center;
-  font-size: 24px;
-  line-height: 28px;
-}
-
-footer p {
-  font-size: 24px;
-  line-height: 28px;
-}
-
-.footer-info-link .fab, .footer-info-link .far {
-  color: $pivotalBlue;
-  padding-left: 8px;
 }
 
 // Media Queries
@@ -299,7 +273,7 @@ footer p {
     padding: 4 0;
   }
 
-  .signup-block-btn {
+  .demo-login-btn {
     margin-top: 16px;
     font-size: 24px;
     line-height: 32px;
