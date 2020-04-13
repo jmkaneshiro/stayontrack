@@ -8,10 +8,13 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  username        :string           not null
+#  name            :string           not null
+#  initials        :string           not null
 #
 class User < ApplicationRecord
-  validates :email, :session_token, presence: true, uniqueness: true
-  validates :password_digest, presence: true
+  validates :email, :session_token, :username, presence: true, uniqueness: true
+  validates :password_digest, :name, :initials, presence: true
   validates :password, length: {minimum: 6}, allow_nil: true
   attr_reader :password
 
