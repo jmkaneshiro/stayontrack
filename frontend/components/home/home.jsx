@@ -37,7 +37,7 @@ const Home = ({ demoLogin }) => (
               </div>
             </li>
             <li>
-              <a href="https://www.pivotaltracker.com/" target="_blank" className="header-link menu-lg">Learn More About: Pivotal Tracker</a>
+              <a href="https://www.pivotaltracker.com/" target="_blank" className="header-link menu-lg">Cloned Site: Pivotal Tracker</a>
             </li>
             <li><Link className="btn btn-orange" to="/login">Log In</Link></li>
             <li><Link className="btn btn-blue" to="/signup">Sign Up</Link></li>
@@ -49,7 +49,7 @@ const Home = ({ demoLogin }) => (
               <li><a href="https://www.pivotaltracker.com/pricing" target="_blank" className="header-link">Pricing</a></li>
               <li><a href="https://www.pivotaltracker.com/integrations" target="_blank" className="header-link">Integrations</a></li>
               <li><a href="https://www.pivotaltracker.com/enterprise" target="_blank" className="header-link">Enterprise</a></li>
-              <li><a href="https://www.pivotaltracker.com/" target="_blank" className="header-link">Learn More About: Pivotal Tracker</a></li>
+              <li><a href="https://www.pivotaltracker.com/" target="_blank" className="header-link">Cloned Site: Pivotal Tracker</a></li>
               <li><a href="https://www.pivotaltracker.com/events" target="_blank" className="header-link">Events</a></li>
               <li><a href="https://www.pivotaltracker.com/buildtv" target="_blank" className="header-link">BuildTV</a></li>
               <li><a href="https://www.pivotaltracker.com/customer-stories" target="_blank" className="header-link">Customer Stories</a></li>
