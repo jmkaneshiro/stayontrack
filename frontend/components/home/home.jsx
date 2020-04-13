@@ -163,9 +163,9 @@ const Home = ({ demoLogin }) => (
       </section>
       <section className="section-md">
         <div className="page-container">
-          <div className="signup-block">
+          <div className="demo-login">
             <h2 className="banner-msg">Ready to get your team on track? Test it out for yourself.</h2>
-            <button onClick={demoLogin} className="btn btn-orange signup-block-btn">Demo Login</button>
+            <button onClick={demoLogin} className="btn btn-orange demo-login-btn">Demo Login</button>
           </div>
         </div>
       </section>
@@ -175,18 +175,6 @@ const Home = ({ demoLogin }) => (
             mobile apps for iOS and Android"/>
         </div>
       </section>
-      <footer>
-        <p>Like what you see? <strong>Contact me!</strong></p>
-        <a href="mailto:jmkaneshiro+hire_me@gmail.com?Subject=Interested%20Recruiter%20Or%20Hiring%20Manager" className="footer-info-link" target="_blank">
-          <i className="far fa-envelope"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/jared-kaneshiro-9b83322b/" className="footer-info-link" target="_blank">
-          <i className="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/jmkaneshiro" className="footer-info-link" target="_blank">
-          <i className="fab fa-github-square"></i>
-        </a>
-      </footer>
     </div>
   </>
 
