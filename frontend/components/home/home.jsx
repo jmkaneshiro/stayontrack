@@ -174,6 +174,18 @@ const Home = ({ currentUser }) => (
             mobile apps for iOS and Android"/>
         </div>
       </section>
+      <footer>
+        <p>Like what you see? <strong>Contact me!</strong></p>
+        <a href="mailto:jmkaneshiro+hire_me@gmail.com?Subject=Interested%20Recruiter%20Or%20Hiring%20Manager" className="footer-info-link" target="_blank">
+          <i className="far fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jared-kaneshiro-9b83322b/" className="footer-info-link" target="_blank">
+          <i className="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/jmkaneshiro" className="footer-info-link" target="_blank">
+          <i className="fab fa-github-square"></i>
+        </a>
+      </footer>
     </div>
   </>
 
