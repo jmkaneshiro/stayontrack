@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Home = ({ currentUser }) => (
+const Home = ({ demoLogin }) => (
+
   <>
     <a className="global-banner" href="https://content.pivotal.io/blog/pivotal-vmware-transforming-
     how-more-of-the-world-builds-software">StayOnTrack + VMware: <span>Transforming how more of the 
@@ -164,7 +165,7 @@ const Home = ({ currentUser }) => (
         <div className="page-container">
           <div className="signup-block">
             <h2 className="banner-msg">Ready to get your team on track? Test it out for yourself.</h2>
-            <Link to="/signup" className="btn btn-orange signup-block-btn">Demo Log In</Link>
+            <button onClick={demoLogin} className="btn btn-orange signup-block-btn">Demo Login</button>
           </div>
         </div>
       </section>
