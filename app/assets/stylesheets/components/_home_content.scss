@@ -1,3 +1,11 @@
+@import "../base/colors";
+
+
+//Footer
+footer {
+  color: black;
+}
+
 // Hero banner
 .hero {
   background-image: image_url("marketing/icon-explosion.svg");
@@ -72,8 +80,8 @@
 }
 
 .signup-form-home > input:last-child {
-  background-color: #5081b2;
-  border-color: #5081b2;
+  background-color:$pivotalBlue;
+  border-color: $pivotalBlue;
   border-style: solid;
   font-size: 16px;
   color: white;
@@ -95,7 +103,7 @@
 
 .google-sign-in > a {
   display: block;
-  color: #5081b2;
+  color: $pivotalBlue;
   background-image: image_url("marketing/google-sign-in.svg");
   background-repeat: no-repeat;
   padding-left: 22px;
@@ -132,11 +140,9 @@
   align-items: center;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
-  // flex: 0 1 auto;
 }
 
 .info-image, .info-text {
-  // flex: 1 1 0;
   flex: 50%;
 }
 
@@ -175,8 +181,8 @@ h3.banner-msg {
 
 .text-box-btn {
   background-color: #ffffff;
-  border: 1px solid #5081b2;
-  color: #5081b2;
+  border: 1px solid $pivotalBlue;
+  color: $pivotalBlue;
   display: inline-flex;
   justify-content: space-between;
   font-size: 16px;
@@ -192,7 +198,7 @@ h3.banner-msg {
 .text-box-btn:hover {
   text-decoration: none;
   background-color: #edf2f7;
-  color: #5081b2;
+  color: $pivotalBlue;
 }
 
 .signup-block {
@@ -205,6 +211,26 @@ h3.banner-msg {
 .signup-block-btn {
   font-size: 16px;
   line-height: 24px;
+}
+
+//Footer
+footer {
+  border-top: 1px solid #c3d4e5;
+  padding: 28px 0px;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+footer p {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.footer-info-link .fab, .footer-info-link .far {
+  color: $pivotalBlue;
+  padding-left: 8px;
 }
 
 // Media Queries

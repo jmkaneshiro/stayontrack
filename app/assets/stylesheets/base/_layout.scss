@@ -1,3 +1,5 @@
+@import "./colors";
+
 html {
 	position: relative;
 	height: 100%;
@@ -7,7 +9,7 @@ body {
   margin: 0 auto;
   font-family: "open-sans", sans-serif, AppleEmoji, SegoeUIEmoji, EmojiOne;;
   font-size: 14px;
-  color: #4a4a4a;
+  color: $pivotalGray;
 }
 
 a {
@@ -29,27 +31,27 @@ a {
 }
 
 .btn-blue {
-  background-color: #5081b2;
+  background-color: $pivotalBlue;
   color: #ffffff;
 }
 
 .btn-blue:hover {
-  background-color: #286287;
+  background-color: $pivotalBlueHover;
 }
 
 .btn-white {
   background-color: white;
-  color: #5081b2;
-  border: 1px solid #5081b2;
+  color: $pivotalBlue;
+  border: 1px solid $pivotalBlue;
 }
 
 .btn-orange {
-  background-color: #f39e40;
+  background-color: $pivotalOrange;
   color: #ffffff;
 }
 
 .btn-orange:hover {
-  background-color: #ee7d00;
+  background-color: $pivotalOrangeHover;
 }
 
 .gray-background {

@@ -1,3 +1,5 @@
+@import "../base/colors";
+
 a.global-banner span {
   font-weight: normal;
 }
@@ -7,7 +9,7 @@ a.global-banner {
   padding: 10px 0;
   color: white;
   text-align: center;
-  background: #5081b2;
+  background: $pivotalBlue;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
@@ -45,7 +47,7 @@ a.global-banner:hover {
 }
 
 .main-nav-options .main-nav-dropdown, .main-nav-options .header-link {
-  color: #5081b2;
+  color: $pivotalBlue;
   text-decoration: none;
   font-size: 14px;
   padding: 4px 8px;
@@ -81,7 +83,7 @@ a.global-banner:hover {
   position:absolute;
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
-  box-shadow: 0 4px 12px #4a4a4a;
+  box-shadow: 0 4px 12px $pivotalGray;
   top: 55px;
   width: 60vw;
   right: 20px;
@@ -108,7 +110,7 @@ a.global-banner:hover {
 .main-nav-dropdown > ul li:hover {
   background-color: #c3d4e5;
   border-radius: 4px;
-  color: #5081b2; 
+  color: $pivotalBlue; 
   margin: 8px;
 }
 

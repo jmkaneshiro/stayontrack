@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Home = ({ currentUser }) => (
+const Home = ({ demoLogin }) => (
+
   <>
     <a className="global-banner" href="https://content.pivotal.io/blog/pivotal-vmware-transforming-
     how-more-of-the-world-builds-software">StayOnTrack + VMware: <span>Transforming how more of the 
@@ -164,7 +165,7 @@ const Home = ({ currentUser }) => (
         <div className="page-container">
           <div className="signup-block">
             <h2 className="banner-msg">Ready to get your team on track? Test it out for yourself.</h2>
-            <Link to="/signup" className="btn btn-orange signup-block-btn">Demo Log In</Link>
+            <button onClick={demoLogin} className="btn btn-orange signup-block-btn">Demo Login</button>
           </div>
         </div>
       </section>
@@ -174,6 +175,18 @@ const Home = ({ currentUser }) => (
             mobile apps for iOS and Android"/>
         </div>
       </section>
+      <footer>
+        <p>Like what you see? <strong>Contact me!</strong></p>
+        <a href="mailto:jmkaneshiro+hire_me@gmail.com?Subject=Interested%20Recruiter%20Or%20Hiring%20Manager" className="footer-info-link" target="_blank">
+          <i className="far fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jared-kaneshiro-9b83322b/" className="footer-info-link" target="_blank">
+          <i className="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/jmkaneshiro" className="footer-info-link" target="_blank">
+          <i className="fab fa-github-square"></i>
+        </a>
+      </footer>
     </div>
   </>
 
