@@ -1,0 +1,203 @@
+//Header and Main Nav
+.dashboard-header {
+  background-color: $primaryBlue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-toggle-dropdown {
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: #CADCE4;
+  display: block;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 14px 0 2px;
+  position: relative;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-toggle-dropdown > .arrow-down {
+  margin-left: 4px;
+}
+
+.project-nav .fa-bell {
+  padding: 6px 2px;
+  border: 2px;
+  margin: 2px;
+}
+
+.project-nav .logo {
+  padding: 2px 0px;
+  border: 0px;
+}
+
+.project-nav .logo {
+  width: 116px;
+}
+
+.user-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-nav .fa-bell {
+  color: $secondaryBlue;
+  opacity: .4;
+  font-size: 14px;
+}
+
+.dashboard-tabs-container {
+  height: 55px;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+}
+
+.dashboard-tabs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.dashboard-tabs {
+  height: 55px;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.dashboard-tab {
+  padding: 0px 16px 16px 16px;
+  margin-bottom: 0px;
+  color: $unselectedGray;
+}
+
+.dashboard-tabs > .active-tab {
+  color: $selectedGray;
+  border-bottom: 3px solid $primaryOrange;
+}
+
+.dashboard-tabs > .inactive-tab {
+  padding-bottom: 19px;
+}
+
+.dashboard-tabs > .inactive-tab:hover {
+  border-bottom: 3px solid $unselectedGray;
+  padding-bottom: 16px;
+}
+
+.dashboard-action-tabs-btn {
+  font-size: 14px;
+  text-align: center;
+  padding: 8px 11px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 8px 5px;
+}
+
+//Dashboard
+
+// Projects pane
+.projects-pane-container {
+  background-color:$backgroundGray;
+}
+
+.projects-pane {
+  padding-top: 30px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.projects-top-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.projects-searchbar {
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  background-color: white;
+  height: 35px;
+  width: 90%;
+}
+
+.searchbar-input {
+  color: $selectedGray;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 8px 50px 8px 0px;
+}
+
+.projects-searchbar .fa-search {
+  padding: 8px;
+}
+
+.projects-quick-dropdown {
+  padding: 10px;
+  min-width: 115px;
+}
+.projects-quick-dropdown > .fa-chevron-down {
+  padding-left: 8px;
+}
+
+.projects-quick-dropdown:hover {
+  background-color: #E6E6E6;
+  border-radius: 2px;
+  border-width: 1px;
+  border-color: transparent;
+}
+
+// My Projects
+.my-projects > h1 {
+  font-weight: 600;
+  margin-right: 6px;
+  font-size: 16px;
+  color: #4F575E;
+  text-align: left;
+}
+
+.my-projects > h1 > span {
+  margin-right: 4px;
+}
+
+// Project
+.project-container {
+  background-color: white;
+  border: 1px solid #DDDDDD;
+  height: 140px;
+  width: 440px;
+}
+
+@media (min-width: 962px) {
+  .projects-pane, .dashboard-tabs-wrapper {
+    width: 930px;
+
+  }
+}
