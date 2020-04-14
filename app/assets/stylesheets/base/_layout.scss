@@ -12,6 +12,11 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+.toggle-dropdown {
+  cursor: pointer;
 }
 
 .hidden {

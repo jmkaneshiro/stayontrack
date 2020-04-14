@@ -1,16 +1,15 @@
 footer {
   color: black;
   border-top: 1px solid #c3d4e5;
-  padding: 28px 0px;
+  padding: 18px 0px;
   display: flex;
   justify-content: center;
-  font-size: 24px;
-  
+  align-items: center;
 }
 
 footer p, .footer-info-link .fab, .footer-info-link .far  {
-  font-size: 24px;
-  margin: 14px 0px;
+  font-size: 18px;
+  margin: 4px 0px;
 }
 
 .footer-info-link .fab, .footer-info-link .far {

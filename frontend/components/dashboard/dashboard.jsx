@@ -12,24 +12,42 @@ class Dashboard extends React.Component {
     return (
       <>
         <header className="dashboard-header">
-          <nav className="project-nav header-toggle-dropdown">
-            <Link to="/">
-              <img src={window.logoWhiteURL} alt="Logo" className="logo" />
-            </Link>
-            <div className="arrow-down"></div>
+          <nav className="project-nav toggle-dropdown">
+            <input type="checkbox" id="project-nav-toggle" />
+            <label htmlFor="project-nav-toggle" className="toggle-dropdown-label">
+              <div>
+                <img src={window.logoWhiteURL} alt="Logo" className="logo" />
+                <span className="arrow-down"></span>
+              </div>
+            </label>
           </nav>
           <div className="user-nav">
-            <div className="notifications header-toggle-dropdown">
-              <i className="fas fa-bell"></i>
+            <div className="toggle-dropdown">
+              <input type="checkbox" id="notifications-toggle" />
+              <label htmlFor="notifications-toggle" className="toggle-dropdown-label">
+                <i className="fas fa-bell"></i>
+              </label>
             </div>
-            <div className="header-toggle-dropdown">
-              WHAT'S NEW <div className="arrow-down"></div>
+            <div className="toggle-dropdown">
+              <input type="checkbox" id="stayontrack-updates-toggle" />
+              <label htmlFor="stayontrack-updates-toggle" className="toggle-dropdown-label">
+                <div>What's New<span className="arrow-down"></span></div>
+              </label>
             </div>
-            <div className="header-toggle-dropdown">
-              HELP <div className="arrow-down"></div>
+            <div className="toggle-dropdown">
+              <input type="checkbox" id="help-toggle" />
+              <label htmlFor="help-toggle" className="toggle-dropdown-label">
+                <div>Help<span className="arrow-down"></span></div>
+              </label>
             </div>
-            <nav className="user-profile header-toggle-dropdown">
-              {this.props.currentUser.username} <div className="arrow-down"></div>
+            <nav className="toggle-dropdown">
+              <input type="checkbox" id="user-profile-toggle" />
+              <label htmlFor="user-profile-toggle" className="toggle-dropdown-label">
+                <div>{this.props.currentUser.username}<span className="arrow-down"></span></div>
+              </label>
+              <ul>
+                <li onClick={logout}>Log Out</li>
+              </ul>
             </nav>
           </div>
         </header>
@@ -59,18 +77,28 @@ class Dashboard extends React.Component {
               </section>
               <section className="my-projects">
                 <h1>
-                  <i class="fas fa-bars"></i> <span>My Projects |</span>
+                  <i className="fas fa-bars"></i> <span>My Projects |</span>
                   <span className="project-count">1</span>
                 </h1>
                 <ul className="project-list">
                   <li>
                     <section className="project-container">
-                      Demo Project
+                      <div className="project-header">
+                        <a className="project-title">Demo Project</a>
+                        <div className="project-header-actions">
+                          <a href=""><i className="far fa-heart"></i></a>
+                          <a href=""><i className="fas fa-user-friends"></i></a>
+                          <a href=""><i className="fas fa-cog"></i></a>
+                        </div>
+                      </div>
+                      <section className="analytics">
+                        <div>Velocity 10</div>
+                        <div>Volatility 0%</div>
+                      </section>
                     </section>
                   </li>
                 </ul>
               </section>
-              <button className="btn btn-blue" onClick={logout} > Log Out </button>
             </section>
           </div>
 

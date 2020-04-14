@@ -63,7 +63,7 @@ class SessionForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                   {this.renderErrors()}
                   <label className="auth-input-label">Email
-                <input type="text"
+                <input type="email"
                       className="auth-input-field"
                       value={this.state.email}
                       onChange={this.update("email")}

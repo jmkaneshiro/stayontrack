@@ -1,3 +1,5 @@
+
+
 //Header and Main Nav
 .dashboard-header {
   background-color: $primaryBlue;
@@ -5,45 +7,71 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  max-height: 36px;
+  border-bottom: 1px black solid;
 }
 
-.header-toggle-dropdown {
+//toggle-dropdown
+.toggle-dropdown {
+  position: relative;
+}
+
+.toggle-dropdown-label {
+  cursor: pointer;
   background-color: transparent;
-  border: 2px solid transparent;
-  color: #CADCE4;
+  color: $secondaryBlue;
   display: block;
-  font-family: inherit;
   font-size: 11px;
   font-weight: 600;
   margin: 0;
-  overflow: hidden;
   padding: 0 14px 0 2px;
-  position: relative;
   text-overflow: ellipsis;
   text-transform: uppercase;
+}
+
+.toggle-dropdown-label > div {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
 }
 
-.header-toggle-dropdown > .arrow-down {
-  margin-left: 4px;
+.toggle-dropdown-label > div .arrow-down {
+  margin-left: 5px;
 }
 
-.project-nav .fa-bell {
-  padding: 6px 2px;
-  border: 2px;
-  margin: 2px;
+.toggle-dropdown ul {
+  display: none;
 }
 
-.project-nav .logo {
-  padding: 2px 0px;
-  border: 0px;
+.toggle-dropdown li:hover {
+  background-color: $lightGray;
+}
+
+input[type=checkbox]{
+  display: none;
+}
+.toggle-dropdown input[type=checkbox]:checked ~ ul {
+    display: block;
+    position: absolute;
+    background-color: white;
+    border-radius: 2px;
+    border: $lightGray;
+    box-shadow: 0 4px 12px $pivotalGray;
+    width: 198px;
+    top: 28px;
+    right: 18px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.toggle-dropdown input[type=checkbox]:checked ~ ul li {
+  padding: 2px 16px;
 }
 
 .project-nav .logo {
   width: 116px;
+  padding: 2px 0px;
+  border: 0px;
 }
 
 .user-nav {
@@ -58,6 +86,8 @@
   opacity: .4;
   font-size: 14px;
 }
+
+//Dashboard
 
 .dashboard-tabs-container {
   height: 55px;
@@ -87,7 +117,7 @@
 .dashboard-tab {
   padding: 0px 16px 16px 16px;
   margin-bottom: 0px;
-  color: $unselectedGray;
+  color: $lightGray;
 }
 
 .dashboard-tabs > .active-tab {
@@ -100,7 +130,7 @@
 }
 
 .dashboard-tabs > .inactive-tab:hover {
-  border-bottom: 3px solid $unselectedGray;
+  border-bottom: 3px solid $lightGray;
   padding-bottom: 16px;
 }
 
@@ -113,11 +143,10 @@
   margin: 8px 5px;
 }
 
-//Dashboard
-
-// Projects pane
+// Projects Pane
 .projects-pane-container {
   background-color:$backgroundGray;
+  min-height: 506px;
 }
 
 .projects-pane {
@@ -168,7 +197,7 @@
 }
 
 .projects-quick-dropdown:hover {
-  background-color: #E6E6E6;
+  background-color: $lightGray;
   border-radius: 2px;
   border-width: 1px;
   border-color: transparent;
@@ -179,7 +208,7 @@
   font-weight: 600;
   margin-right: 6px;
   font-size: 16px;
-  color: #4F575E;
+  color: $headerGray;
   text-align: left;
 }
 
@@ -190,9 +219,49 @@
 // Project
 .project-container {
   background-color: white;
-  border: 1px solid #DDDDDD;
+  border: 1px solid $lightestGray;
   height: 140px;
   width: 440px;
+}
+
+.project-header {
+  border-bottom: 2px solid $lightestGray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-title {
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 600;
+  color:$headerGray;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 8px;
+
+}
+
+.project-title:hover {
+  text-decoration-line: underline;
+  color:$pivotalBlueHover;
+}
+
+.project-header-actions .fas, .project-header-actions .far {
+  padding: 12px;
+}
+
+.project-header-actions .fas:hover, .project-header-actions .far:hover {
+  background-color: $lightestGray;
+}
+
+.analytics {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 378px;
+  height: 73px;
+  padding: 10px 30px;
 }
 
 @media (min-width: 962px) {
