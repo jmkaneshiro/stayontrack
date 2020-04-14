@@ -86,7 +86,10 @@
   line-height: 62px;
   padding-right: 12px;
   font-size: 100%;
-  min-width: 255px;
+}
+
+.signup-signin-redirect > span {
+  display: none;
 }
 
 .auth-submit {
@@ -112,4 +115,11 @@
   font-size: 13px;
   font-weight: 200;
   padding: 18px 20px;
+}
+
+@media (min-width: 680px) {
+  .signup-signin-redirect > span {
+    display: inline;
+    padding: 0px 8px;
+  }
 }
