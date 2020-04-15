@@ -20,6 +20,14 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :projects_owned,
+    foreign_key: :project_owner_id,
+    class_name: :Project
+
+  has_many :project_memberships,
+    foreign_key: :project_id,
+    class_name: :ProjectMembership
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     
