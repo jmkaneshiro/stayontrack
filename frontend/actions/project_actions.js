@@ -7,5 +7,5 @@ const receiveProject = (project) => ({
   project
 });
 
-export const createProject = (title) => dispatch => ProjectApiUtil.createProject(title)
+export const createProject = (project) => dispatch => ProjectApiUtil.createProject(project)
   .then(project => dispatch(receiveProject(project)));

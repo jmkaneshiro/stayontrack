@@ -121,7 +121,7 @@ input[type=checkbox]{
 }
 
 .dashboard-tabs > .active-tab {
-  color: $selectedGray;
+  color: $darkestGray;
   border-bottom: 3px solid $primaryOrange;
 }
 
@@ -178,7 +178,7 @@ input[type=checkbox]{
 }
 
 .searchbar-input {
-  color: $selectedGray;
+  color: $darkestGray;
   font-size: 14px;
   font-weight: normal;
   padding: 8px 50px 8px 0px;

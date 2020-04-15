@@ -66,6 +66,17 @@ a {
   background-color: $pivotalGreenHover;
 }
 
+.btn-white {
+  background-color: white;
+  color: $darkGray;
+  border-color: white;
+}
+
+.btn-white:hover {
+  background-color: $lightestGray;
+  border-color: $lightestGray;
+}
+
 .gray-background {
   background-color: #F3F4F4;
 }
@@ -122,7 +133,57 @@ p {
 }
 
 /*
+  Modal
+*/
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+}
+
+/*
 	Inputs
 */
+
+.form-input-label {
+  color: #888;
+  font-weight: 300;
+  line-height: 15px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  
+}
+
+.form-input-field {
+  padding: 14px 8px;
+  font-size: 16px;
+  width: 100%;
+  outline: 0;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  margin-top: 8px;
+  border-radius: 3px;
+  border: 1px solid $lightGray;
+}
+
+.form-input-field:focus {
+  border-color: #4A90E2;
+  box-shadow: 0 0 4px 0 #4A90E2;
+}
+
+
 
 /* Media Queries */
