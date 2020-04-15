@@ -1,8 +1,6 @@
 class Api::ProjectsController < ApplicationController
   def create
-    debugger
     @project = Project.new(title: params[:title], project_owner_id: current_user.id)
-    debugger
     if @project.save
       render "/api/projects/show"
     else
