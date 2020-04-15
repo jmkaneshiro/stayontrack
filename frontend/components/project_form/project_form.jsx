@@ -1,4 +1,5 @@
 import React from "react";
+import { closeModal } from '../../actions/modal_actions';
 
 class ProjectForm extends React.Component {
   constructor(props) {
@@ -24,21 +25,38 @@ class ProjectForm extends React.Component {
   }
 
   render() {
-    const { currentUser } = this.props;
+    const { currentUser, closeModal } = this.props;
 
     return (
       <>
-        <form onSubmit={this.handleSubmit}>
-          <label className="auth-input-label">Project Name
+        <form onSubmit={this.handleSubmit} className="create-project-form">
+          <h1>Create a new project</h1>
+          <label className="form-input-label">
+            <span>Project Name</span>
             <input type="text"
-              className="auth-input-field"
+              className="form-input-field"
               placeholder="Enter a name for your project"
               value={this.state.title}
               onChange={this.update("title")}
             />
           </label>
-          <div>{currentUser.name}'s Projects</div>
-          <input type="submit" className="auth-submit" value="Create" />
+          <div className="form-input-label account-select">
+            <span>Account</span>
+            <span>{currentUser.name}'s Projects</span>
+          </div>
+          <div className="modal-form-footer">
+            <button 
+              className="dashboard-action-tabs-btn btn btn-white"
+              onClick={ () => closeModal()} 
+            >
+              Cancel
+            </button>
+            <input
+              type="submit"
+              className="dashboard-action-tabs-btn btn btn-green"
+              value="Create"
+            />
+          </div>
         </form>
       </>
     );

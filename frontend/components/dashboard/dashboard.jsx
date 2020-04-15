@@ -7,7 +7,7 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    const { logout } = this.props;
+    const { logout, openModal } = this.props;
 
     return (
       <>
@@ -58,10 +58,12 @@ class Dashboard extends React.Component {
                 <div className="dashboard-tab active-tab">Projects</div>
                 <div className="dashboard-tab inactive-tab">Workspaces</div>
               </div>
-              <Link to="/projects/new" className="dashboard-action-tabs-btn btn btn-green">Create project</Link>
-              {/* <button className="dashboard-action-tabs-btn btn btn-green">
-                Create project
-              </button> */}
+              <button 
+                className="dashboard-action-tabs-btn btn btn-green"
+                onClick={() => openModal('create project')}
+              >
+                Create Project
+              </button>
             </div>
           </div>
           <div className="projects-pane-container">
