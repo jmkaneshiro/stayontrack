@@ -1,6 +1,6 @@
 class Api::ProjectsController < ApplicationController
   def create
-    @project = Project.new(title: params[:title], project_owner_id: current_user.id)
+    @project = Project.new(project_params)
     if @project.save
       render "/api/projects/show"
     else
@@ -14,6 +14,6 @@ class Api::ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title)
+    params.require(:project).permit(:title, :project_owner_id)
   end
 end

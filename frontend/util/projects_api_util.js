@@ -1,8 +1,8 @@
-export const createProject = (title) => (
+export const createProject = (project) => (
   $.ajax({
     url: "/api/projects",
     method: "POST",
-    data: { title }
+    data: { project }
   })
 );
 
