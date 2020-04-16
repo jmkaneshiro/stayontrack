@@ -16,8 +16,19 @@ const receiveProject = (project) => ({
 export const fetchProjects = () => dispatch => ProjectApiUtil.fetchProjects()
   .then(projects => dispatch(receiveProjects(projects)));
 
-export const fetchProject = id => dispatch => ProjectApiUtil.fetchProject(id)
-  .then(project => dispatch(receiveProject(project)));
+// export const fetchProject = id => dispatch => ProjectApiUtil.fetchProject(id)
+//   .then(project => dispatch(receiveProject(project)));
 
-export const createProject = (project) => dispatch => ProjectApiUtil.createProject(project)
-  .then(project => dispatch(receiveProject(project)));
+export const fetchProject = id => dispatch => (
+  ProjectApiUtil.fetchProject(id).then(project => {
+    dispatch(receiveProject(project));
+    return project;
+  })
+);
+
+export const createProject = project => dispatch => (
+  ProjectApiUtil.createProject(project).then(project => {
+    dispatch(receiveProject(project));
+    return project;
+  })
+);

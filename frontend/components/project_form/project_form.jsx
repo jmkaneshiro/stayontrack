@@ -1,5 +1,5 @@
 import React from "react";
-import { closeModal } from '../../actions/modal_actions';
+import { withRouter } from "react-router-dom";
 
 class ProjectForm extends React.Component {
   constructor(props) {
@@ -21,7 +21,10 @@ class ProjectForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const project = Object.assign({}, this.state);
-    this.props.createProject(project);
+    this.props.closeModal();
+    this.props.createProject(project).then(newProject => {
+      this.props.history.push(`/projects/${newProject.id}`);
+    });
   }
 
   render() {
@@ -63,5 +66,5 @@ class ProjectForm extends React.Component {
   }
 }
 
-export default ProjectForm;
+export default withRouter(ProjectForm);
 

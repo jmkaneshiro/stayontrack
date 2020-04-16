@@ -1,3 +1,4 @@
+import React from "react";
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { fetchProject, fetchProjects } from "../../actions/project_actions";
@@ -9,7 +10,14 @@ import Dashboard from './dashboard';
 const mapStateToProps = ({ session, entities: { users, projects } }) => {
   return {
     currentUser: users[session.id],
-    projects: selectAllProjects(projects)
+    projects: selectAllProjects(projects),
+    projectsDropdownLabel: 
+      <label htmlFor="project-nav-toggle" className="toggle-dropdown-label">
+        <div>
+          <img src={window.logoWhiteURL} alt="Logo" className="logo" />
+          <span className="arrow-down"></span>
+        </div>
+      </label>
   };
 };
 

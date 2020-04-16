@@ -38,6 +38,19 @@ a.global-banner:hover {
   width: 210px;
 }
 
+.logo-small {
+  height: 28px;
+  width: 28px;
+  padding: 2px 4px 0px 2px;
+  margin: 2px;
+}
+
+.project-nav-toggle-title {
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: none;
+}
+
 .main-nav-options {
   display: flex;
   flex-direction: row;
@@ -117,8 +130,6 @@ a.global-banner:hover {
   padding-right: 8px;
   text-align: right;
 }
-
-//Hamburger menu
 
 // Media Queries
 
