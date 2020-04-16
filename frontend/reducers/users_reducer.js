@@ -7,11 +7,9 @@ const usersReducer = (oldState={}, action) => {
     case RECEIVE_CURRENT_USER:
       return Object.assign({}, oldState, { [action.currentUser.id]: action.currentUser });
     case RECEIVE_PROJECT:
-      let projectOwner = oldState[action.project.project_owner_id];
+      let projectOwner = [action.project.project_owner_id];
       let projectsOwned = projectOwner.projects_owned;
-      let updatedUserSlice = Object.assign({}, projectOwner, { "projects_owned": [...projectsOwned, action.project.id] });
-
-      return Object.assign({}, oldState, { [action.project.project_owner_id]: updatedUserSlice });
+      return Object.assign({}, oldState, { projectOwner: { "projects_owned": projectsOwned }});
     default:
       return oldState;
   }

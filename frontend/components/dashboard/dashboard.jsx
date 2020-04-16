@@ -7,7 +7,7 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    const { logout, openModal } = this.props;
+    const { currentUser, logout, openModal } = this.props;
 
     return (
       <>
@@ -43,7 +43,7 @@ class Dashboard extends React.Component {
             <nav className="toggle-dropdown">
               <input type="checkbox" id="user-profile-toggle" />
               <label htmlFor="user-profile-toggle" className="toggle-dropdown-label">
-                <div>{this.props.currentUser.username}<span className="arrow-down"></span></div>
+                <div>{currentUser.username}<span className="arrow-down"></span></div>
               </label>
               <ul>
                 <li onClick={logout}>Log Out</li>
@@ -104,7 +104,6 @@ class Dashboard extends React.Component {
               </section>
             </section>
           </div>
-
         </section>
       </>
     );
