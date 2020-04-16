@@ -6,8 +6,12 @@ class Dashboard extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchProjects();
+  }
+
   render() {
-    const { currentUser, logout, openModal } = this.props;
+    const { projects, currentUser, logout, openModal } = this.props;
 
     return (
       <>
@@ -84,22 +88,24 @@ class Dashboard extends React.Component {
                   <span className="project-count">1</span>
                 </h1>
                 <ul className="project-list">
-                  <li>
-                    <section className="project-container">
-                      <div className="project-header">
-                        <a className="project-title">Demo Project</a>
-                        <div className="project-header-actions">
-                          <a href=""><i className="far fa-heart"></i></a>
-                          <a href=""><i className="fas fa-user-friends"></i></a>
-                          <a href=""><i className="fas fa-cog"></i></a>
+                  {projects.map(project =>
+                    <li>
+                      <section className="project-container">
+                        <div className="project-header">
+                          <a className="project-title">{project.title}</a>
+                          <div className="project-header-actions">
+                            <a href=""><i className="far fa-heart"></i></a>
+                            <a href=""><i className="fas fa-user-friends"></i></a>
+                            <a href=""><i className="fas fa-cog"></i></a>
+                          </div>
                         </div>
-                      </div>
-                      <section className="analytics">
-                        <div>Velocity 10</div>
-                        <div>Volatility 0%</div>
+                        <section className="analytics">
+                          <div>Velocity 10</div>
+                          <div>Volatility 0%</div>
+                        </section>
                       </section>
-                    </section>
-                  </li>
+                    </li>
+                  )}
                 </ul>
               </section>
             </section>

@@ -42,7 +42,7 @@ const Home = ({ demoLogin }) => (
             <li><Link className="btn btn-orange" to="/login">Log In</Link></li>
             <li><Link className="btn btn-blue" to="/signup">Sign Up</Link></li>
           </ul>
-          <div className="main-nav-dropdown btn btn-white menu-md">
+          <div className="main-nav-dropdown btn btn-white-blue-border menu-md">
               <span>Menu<img className="dropdown-arrow" src={window.arrowSmallDropdownURL} alt="Dropdown arrow" /></span>
             <ul>
               <li><a href="https://www.pivotaltracker.com/features" target="_blank" className="header-link">Features</a></li>

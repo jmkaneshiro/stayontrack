@@ -4,7 +4,6 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 import * as SessionActions from "./actions/session_actions";
 import * as ProjectActions from "./actions/project_actions";
-import * as ProjectApiUtil from "./util/projects_api_util";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;

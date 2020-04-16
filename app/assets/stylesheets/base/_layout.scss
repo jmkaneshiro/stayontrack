@@ -42,10 +42,25 @@ a {
   background-color: $pivotalBlueHover;
 }
 
-.btn-white {
+.btn-white-blue-border {
   background-color: white;
   color: $pivotalBlue;
   border: 1px solid $pivotalBlue;
+}
+
+.btn-white-blue-border:hover {
+  background-color: $lightestGray;
+}
+
+.btn-white {
+  background-color: white;
+  color: $darkGray;
+  border-color: white;
+}
+
+.btn-white:hover {
+  background-color: $lightestGray;
+  border-color: $lightestGray;
 }
 
 .btn-orange {
@@ -64,17 +79,6 @@ a {
 
 .btn-green:hover {
   background-color: $pivotalGreenHover;
-}
-
-.btn-white {
-  background-color: white;
-  color: $darkGray;
-  border-color: white;
-}
-
-.btn-white:hover {
-  background-color: $lightestGray;
-  border-color: $lightestGray;
 }
 
 .gray-background {
