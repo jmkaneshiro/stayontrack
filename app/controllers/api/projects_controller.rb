@@ -1,4 +1,9 @@
 class Api::ProjectsController < ApplicationController
+  def index
+    @projects = Project.all
+    render :index
+  end
+
   def create
     @project = Project.new(project_params)
     if @project.save

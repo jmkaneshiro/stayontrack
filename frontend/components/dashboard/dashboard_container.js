@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
+import { fetchProject, fetchProjects } from "../../actions/project_actions";
 import { openModal, closeModal } from '../../actions/modal_actions';
 import Dashboard from './dashboard';
 
 
 const mapStateToProps = ({ session, entities: { users } }) => {
   return {
-    currentUser: users[session.id]
+    currentUser: users[session.id],
   };
 };
 
