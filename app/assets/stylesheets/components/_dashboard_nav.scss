@@ -58,8 +58,6 @@ input[type=checkbox]{
     border: $lightGray;
     box-shadow: 0 4px 12px $pivotalGray;
     width: 198px;
-    top: 28px;
-    right: 18px;
     font-size: 12px;
     font-weight: 400;
 }
@@ -72,6 +70,15 @@ input[type=checkbox]{
   width: 116px;
   padding: 2px 0px;
   border: 0px;
+}
+
+.project-nav input[type=checkbox]:checked ~ ul {
+  top: 36px;
+}
+
+.user-profile-dropdown input[type=checkbox]:checked ~ ul {
+  top: 28px;
+  right: 18px;
 }
 
 .user-nav {
@@ -217,11 +224,19 @@ input[type=checkbox]{
 }
 
 // Project
+.project-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .project-container {
   background-color: white;
   border: 1px solid $lightestGray;
   height: 140px;
   width: 440px;
+  margin: 10px;
+  flex: 50%;
 }
 
 .project-header {

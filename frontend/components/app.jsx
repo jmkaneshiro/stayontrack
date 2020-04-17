@@ -13,6 +13,7 @@ import HomeContainer from './home/home_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import DashboardContainer from './dashboard/dashboard_container';
+import ProjectDetailContainer from './project/project_detail_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
@@ -24,6 +25,7 @@ const App = () => (
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute path="/dashboard" component={DashboardContainer} />
+      <ProtectedRoute path="/projects/:id" component={ProjectDetailContainer} />
     </Switch>
     <footer>
       <p>Like what you see? <strong>Contact me!</strong></p>

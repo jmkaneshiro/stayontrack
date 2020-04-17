@@ -1,56 +1,23 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import ProjectsIndexItem from "../project/projects_index_item";
+import TopNavigation from '../navigation/top_navigation';
 
 class Dashboard extends React.Component {
   constructor (props) {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchProjects();
+  }
+
   render() {
-    const { currentUser, logout, openModal } = this.props;
+    const { projects, currentUser, logout, projectsDropdownLabel, openModal } = this.props;
 
     return (
       <>
-        <header className="dashboard-header">
-          <nav className="project-nav toggle-dropdown">
-            <input type="checkbox" id="project-nav-toggle" />
-            <label htmlFor="project-nav-toggle" className="toggle-dropdown-label">
-              <div>
-                <img src={window.logoWhiteURL} alt="Logo" className="logo" />
-                <span className="arrow-down"></span>
-              </div>
-            </label>
-          </nav>
-          <div className="user-nav">
-            <div className="toggle-dropdown">
-              <input type="checkbox" id="notifications-toggle" />
-              <label htmlFor="notifications-toggle" className="toggle-dropdown-label">
-                <i className="fas fa-bell"></i>
-              </label>
-            </div>
-            <div className="toggle-dropdown">
-              <input type="checkbox" id="stayontrack-updates-toggle" />
-              <label htmlFor="stayontrack-updates-toggle" className="toggle-dropdown-label">
-                <div>What's New<span className="arrow-down"></span></div>
-              </label>
-            </div>
-            <div className="toggle-dropdown">
-              <input type="checkbox" id="help-toggle" />
-              <label htmlFor="help-toggle" className="toggle-dropdown-label">
-                <div>Help<span className="arrow-down"></span></div>
-              </label>
-            </div>
-            <nav className="toggle-dropdown">
-              <input type="checkbox" id="user-profile-toggle" />
-              <label htmlFor="user-profile-toggle" className="toggle-dropdown-label">
-                <div>{currentUser.username}<span className="arrow-down"></span></div>
-              </label>
-              <ul>
-                <li onClick={logout}>Log Out</li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+        <TopNavigation currentUser={currentUser} logout={logout} projectsDropdownLabel={projectsDropdownLabel}/>
         <section className="dashboard">
           <div className="dashboard-tabs-container">
             <div className="dashboard-tabs-wrapper">
@@ -84,22 +51,7 @@ class Dashboard extends React.Component {
                   <span className="project-count">1</span>
                 </h1>
                 <ul className="project-list">
-                  <li>
-                    <section className="project-container">
-                      <div className="project-header">
-                        <a className="project-title">Demo Project</a>
-                        <div className="project-header-actions">
-                          <a href=""><i className="far fa-heart"></i></a>
-                          <a href=""><i className="fas fa-user-friends"></i></a>
-                          <a href=""><i className="fas fa-cog"></i></a>
-                        </div>
-                      </div>
-                      <section className="analytics">
-                        <div>Velocity 10</div>
-                        <div>Volatility 0%</div>
-                      </section>
-                    </section>
-                  </li>
+                  {projects.map(project => <ProjectsIndexItem key={project.id} project={project} />)}
                 </ul>
               </section>
             </section>

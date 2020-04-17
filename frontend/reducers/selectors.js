@@ -1,0 +1,1 @@
+export const selectAllProjects = projects => Object.values(projects);
