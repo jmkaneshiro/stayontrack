@@ -20,3 +20,9 @@ export const createProject = (project) => (
     data: { project }
   })
 );
+
+export const createProjectMembership = (projectMembership) => (
+  $.ajax({
+    url: "/"
+  })
+)
