@@ -1,5 +1,4 @@
 import React from 'react';
-import { ProtectedRoute } from '../../util/route_util';
 import TopNavigation from "../navigation/top_navigation";
 
 class ProjectDetail extends React.Component {
@@ -14,7 +13,7 @@ class ProjectDetail extends React.Component {
   
 
   render() {
-    const { currentUser, project, logout, projectsDropdownLabel } = this.props;
+    const { currentUser, logout, projectsDropdownLabel } = this.props;
 
     return (
       <>
@@ -41,9 +40,9 @@ class ProjectDetail extends React.Component {
               <header>
                 <h1>Current Iteration/Backlog</h1>
                 <div className="project-detail-actions">
-                  <span><i class="fas fa-plus"></i> Add Story</span>
-                  <span><i class="fas fa-ellipsis-v"></i></span>
-                  <span><i class="fas fa-times"></i></span>
+                  <span><i className="fas fa-plus"></i> Add Story</span>
+                  <span><i className="fas fa-ellipsis-v"></i></span>
+                  <span><i className="fas fa-times"></i></span>
                 </div>
               </header>
               <section className="stories-stack">

@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from "./components/root";
+import * as ProjectApiUtil from "./util/projects_api_util";
 import * as SessionActions from "./actions/session_actions";
 import * as ProjectActions from "./actions/project_actions";
 
@@ -29,6 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.login = SessionActions.login;
   window.logout = SessionActions.logout;
   window.createProject = ProjectActions.createProject;
+  window.ApiMembership = ProjectApiUtil.createProjectMembership;
+  window.createProjectMembership = ProjectActions.createProjectMembership;
   window.fetchProject = ProjectActions.fetchProject;
   window.fetchProjects = ProjectActions.fetchProjects;
   // TESTING
