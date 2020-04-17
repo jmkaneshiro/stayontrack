@@ -27,8 +27,18 @@ export const fetchProject = id => dispatch => (
 );
 
 export const createProject = project => dispatch => (
-  ProjectApiUtil.createProject(project).then(project => {
-    dispatch(receiveProject(project));
+  ProjectApiUtil.createProject(project)
+  // ProjectApiUtil.createProjectMembership({ project_id: project.id, member_id: project.project_owner_id });
+    .then(project => {
+      dispatch(receiveProject(project));
     return project;
   })
+);
+
+export const createProjectMembership = projectMembership => dispatch => (
+  ProjectApiUtil.createProjectMembership(projectMembership)
+    .then(project => {
+      dispatch(receiveProject(project));
+      return project;
+    })
 );

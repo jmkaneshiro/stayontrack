@@ -10,6 +10,7 @@ const mapStateToProps = ({ session, entities: { users } }) => ({
 
 const mapDispatchToProps = dispatch => ({
   createProject: project => dispatch(createProject(project)),
+  createProjectMembership: project_membership => dispatch(createProjectMembership(project_membership)),
   closeModal: () => dispatch(closeModal())
 });
 
