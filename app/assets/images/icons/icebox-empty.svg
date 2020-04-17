@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="140px" viewBox="0 0 160 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icebox</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Empty-States" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="empty-states" transform="translate(-1026.000000, -289.000000)" fill="#565C64" fill-rule="nonzero">
+            <g id="icebox" transform="translate(985.000000, 289.000000)">
+                <rect id="Rectangle" x="41" y="108" width="160" height="32" rx="4"></rect>
+                <rect id="Rectangle" x="41" y="48" width="160" height="56" rx="4"></rect>
+                <rect id="Rectangle" x="41" y="28" width="160" height="16" rx="4"></rect>
+                <rect id="Rectangle" x="41" y="0" width="160" height="24" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
