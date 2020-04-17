@@ -1,5 +1,4 @@
 # README
-## January 2020 App Academy Cohort
 ![logo](./app/assets/images/marketing/StayOnTrackLogo.svg)
 
 StayOnTrack is a clone of [Pivotal Tracker](https://www.pivotaltracker.com/) -- an agile project management tool. StayOnTrack users should be able to create projects, become members of projects, write user stories, and follow user stories. Stories should be given point values that reflect complexity of work being done.
