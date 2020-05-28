@@ -1,0 +1,1 @@
+json.partial! "api/projects/:project_id/stories/story", story: @story
