@@ -1,2 +1,24 @@
-class Api::SessionsController < ApplicationController
+class Api::StoriesController < ApplicationController
+  def index
+    @stories = Story.all
+    render :index
+  end
+
+  def create
+    @story = Story.new(story_params)
+    if @story.save
+      render "/api/stories/show"
+    else
+      render json: @user.errors.full_messages, status: 422
+    end
+  end
+
+  def show
+    @story = Story.find(params[:id])
+  end
+
+  private
+  def story_params
+    params.require(:story).permit(:name, :type, :story_owner_id, :project_id, :story_state)
+  end
 end
