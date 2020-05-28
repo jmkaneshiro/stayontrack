@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: stories
+#
+#  id                :bigint           not null, primary key
+#  name              :string           not null
+#  type              :integer          not null
+#  story_owner_id    :integer          not null
+#  project_id        :integer          not null
+#  story_state       :string           not null
+#  story_assignee_id :integer
+#  description       :string
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
+
+one:
+  name: MyString
+  type: 1
+  story_owner_id: 1
+  story_assignee_id: 1
+  project_id: 1
+  type: 
+  story_state: MyString
+  description: MyString
+
+two:
+  name: MyString
+  type: 1
+  story_owner_id: 1
+  story_assignee_id: 1
+  project_id: 1
+  type: 
+  story_state: MyString
+  description: MyString

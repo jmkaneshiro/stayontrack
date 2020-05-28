@@ -2,11 +2,12 @@
 #
 # Table name: project_memberships
 #
-#  id               :bigint           not null, primary key
-#  member_id        :integer          not null
-#  project_id       :integer          not null
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
+#  id         :bigint           not null, primary key
+#  member_id  :integer          not null
+#  project_id :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 
 class ProjectMembership < ApplicationRecord
   validates :member_id, uniqueness: {scope: :project_id }
