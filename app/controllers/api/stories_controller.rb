@@ -1,7 +1,8 @@
 class Api::StoriesController < ApplicationController
   def index
-    @stories = Story.all
-    render :index
+    @project = Project.find(params[:story][:project_id])
+    @stories = @project.stories
+    render json: @stories
   end
 
   def create

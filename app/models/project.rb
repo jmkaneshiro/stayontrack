@@ -23,4 +23,7 @@ class Project < ApplicationRecord
     through: :project_memberships,
     source: :member
 
+  has_many :stories,
+    foreign_key: :project_id,
+    class_name: :Story
 end
