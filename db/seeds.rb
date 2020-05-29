@@ -9,3 +9,6 @@
 demo_user_1 = User.create({ email: "demo_user@mailinator.com", password: "password", username: "demo_user", name: "demo_user", initials: "DE" })
 demo_project_1 = Project.create({ title: "My First Project", project_owner_id: 1 })
 demo_project_membership_1 = ProjectMembership.create({ member_id: 1, project_id: 1 })
+
+# demo_project_1_story_1  = Story.create({name: "My First Story", story_type: "feature", story_owner_id: 1, project_id: 1, story_state: "unassigned"}):name, :type, :story_owner_id, :project_id, :story_state
+# Story.new({name: "My First Story", story_type: "feature", story_owner_id: 1, project_id: 1, story_state: "unassigned"})
