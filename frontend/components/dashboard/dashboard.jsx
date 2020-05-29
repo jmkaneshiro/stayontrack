@@ -51,7 +51,9 @@ class Dashboard extends React.Component {
                   <span className="project-count">1</span>
                 </h1>
                 <ul className="project-list">
-                  {projects.map(project => <ProjectsIndexItem key={project.id} project={project} />)}
+                  {projects.map(
+                    project => (project.project_owner_id === currentUser.id || project.project_members.includes(currentUser.id)) && 
+                    (<ProjectsIndexItem key={project.id} project={project} />))}
                 </ul>
               </section>
             </section>
