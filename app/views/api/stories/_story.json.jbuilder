@@ -1,1 +1,1 @@
-json.extract! story, :id, :name, :type, :story_owner_id, :story_state, :story_assignee_id, :description
+json.extract! story, :id, :name, :story_type, :story_owner_id, :story_state, :story_assignee_id, :description
