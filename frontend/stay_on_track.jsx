@@ -6,6 +6,7 @@ import * as ProjectApiUtil from "./util/projects_api_util";
 import * as SessionActions from "./actions/session_actions";
 import * as ProjectActions from "./actions/project_actions";
 import * as StoryAPIUtil from "./util/stories_api_util";
+import * as StoryActions from "./actions/story_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -37,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.fetchProjects = ProjectActions.fetchProjects;
   window.ApiFetchStories = StoryAPIUtil.fetchStories;
   window.ApiFetchStory = StoryAPIUtil.fetchStory;
+  window.fetchStories = StoryActions.fetchStories;
+  window.fetchStory = StoryActions.fetchStory;
   // TESTING
   
   const root = document.getElementById("root");

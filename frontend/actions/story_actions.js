@@ -5,26 +5,23 @@ export const RECEIVE_STORY = "RECEIVE_STORY";
 
 const receiveStories = (stories) => ({
   type: RECEIVE_STORIES,
-  projects
+  stories
 });
 
 const receiveStory = (story) => ({
   type: RECEIVE_STORY,
-  project
+  story
 });
 
 export const fetchStories = (projectId) => dispatch => StoryApiUtil.fetchStories(projectId)
   .then(stories => dispatch(receiveStories(stories)));
 
-// // export const fetchProject = id => dispatch => ProjectApiUtil.fetchProject(id)
-// //   .then(project => dispatch(receiveProject(project)));
-
-// export const fetchProject = id => dispatch => (
-//   ProjectApiUtil.fetchProject(id).then(project => {
-//     dispatch(receiveProject(project));
-//     return project;
-//   })
-// );
+export const fetchStory = (projectId, storyId) => dispatch => (
+  StoryApiUtil.fetchStory(projectId, storyId).then(story => {
+    dispatch(receiveStory(story));
+    return story;
+  })
+);
 
 // export const createProject = project => dispatch => (
 //   ProjectApiUtil.createProject(project)
