@@ -15,7 +15,7 @@ class Api::StoriesController < ApplicationController
   end
 
   def show
-    @story = Story.find(params[:project_id], params[:story_id])
+    @story = Story.find(params[:id])
   end
 
   private
