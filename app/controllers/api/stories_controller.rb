@@ -1,6 +1,6 @@
 class Api::StoriesController < ApplicationController
   def index
-    @project = Project.find(params[:story][:project_id])
+    @project = Project.find(params[:project_id])
     @stories = @project.stories
     render json: @stories
   end
@@ -15,7 +15,7 @@ class Api::StoriesController < ApplicationController
   end
 
   def show
-    @story = Story.find(params[:id])
+    @story = Story.find(params[:project_id], params[:story_id])
   end
 
   private
