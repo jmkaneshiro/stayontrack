@@ -1,2 +1,2 @@
 debugger
-json.partial! "api/projects/project/stories/story", story: @story, project: @story.project_id
+json.partial! "api/stories/story", story: @story
