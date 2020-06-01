@@ -8,9 +8,9 @@
 
 demo_user_1 = User.create({ email: "demo_user@mailinator.com", password: "password", username: "demo_user", name: "demo_user", initials: "DE" })
 jared = User.create({ email: "jared@mailinator.com", password: "password", username: "ja", name: "jared", initials: "JA" })
-demo_project_1 = Project.create({ title: "My First Project", project_owner_id: 1 })
-demo_project_2 = Project.create({ title: "My First Project", project_owner_id: 2 })
+demo_project_1 = Project.create({ title: "Demo's App", project_owner_id: 1 })
+demo_project_2 = Project.create({ title: "Jared's App", project_owner_id: 2 })
 demo_project_1_membership_1 = ProjectMembership.create({ member_id: 1, project_id: 1 })
 demo_project_1_membership_2 = ProjectMembership.create({ member_id: 2, project_id: 1 })
-demo_project_1_story_1 = Story.create({name: "My First Story", story_type: "feature", story_owner_id: 1, project_id: 1, story_state: "unassigned"})
-demo_project_1_story_2 = Story.create({name: "My Second Story", story_type: "feature", story_owner_id: 1, project_id: 1, story_state: "unassigned"})
+demo_project_1_story_1 = Story.create({name: "signup feature", story_type: "feature", story_owner_id: 1, project_id: 1, story_state: "unassigned"})
+demo_project_1_story_2 = Story.create({name: "login feature", story_type: "feature", story_owner_id: 1, project_id: 1, story_state: "unassigned"})
