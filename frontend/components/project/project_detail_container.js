@@ -9,7 +9,7 @@ const mapStateToProps = ({ session, entities: { users, projects } }, ownProps) =
   return {
     currentUser: users[session.id],
     project: project
-  }
+  };
 };
 
 const mapDispatchToProps = dispatch => ({
