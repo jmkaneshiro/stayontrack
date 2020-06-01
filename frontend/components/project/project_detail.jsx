@@ -50,7 +50,7 @@ class ProjectDetail extends React.Component {
               <section className="stories-stack">
                 <ul>
                   {stories.map(
-                    story => (<StoryIndexItem key={story.id} story={story} />
+                    story => (story.project_id === project.id && <StoryIndexItem key={story.id} story={story} />
                   ))}
                 </ul>
                 {/* <img src={window.currentBacklogEmptyURL} alt="Prioritized ideas" />
