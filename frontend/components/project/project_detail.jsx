@@ -13,16 +13,15 @@ class ProjectDetail extends React.Component {
   
 
   render() {
-    debugger
     const { currentUser, logout, project } = this.props;
 
     return (
       <>
-        <TopNavigation
+        {project && <TopNavigation
           currentUser={currentUser} 
           logout={logout} 
           project={project}
-        />
+        />}
         <section className="project-detail-container">
           <nav className="project-detail-sidebar">
             <ul className="project-detail-sidebar-options">
