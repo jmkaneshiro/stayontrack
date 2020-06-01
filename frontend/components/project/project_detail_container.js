@@ -3,13 +3,15 @@ import { connect } from "react-redux";
 import ProjectDetail from "./project_detail";
 import { fetchProject } from "../../actions/project_actions";
 import { fetchStories } from "../../actions/story_actions";
+import { selectAllStories } from "../../reducers/selectors";
 import { logout } from "../../actions/session_actions";
 
-const mapStateToProps = ({ session, entities: { users, projects } }, ownProps) => {
+const mapStateToProps = ({ session, entities: { users, projects, stories } }, ownProps) => {
   const project = projects[ownProps.match.params.id];
   return {
     currentUser: users[session.id],
-    project: project
+    project: project,
+    stories: selectAllStories(stories)
   };
 };
 
