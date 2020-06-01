@@ -13,14 +13,15 @@ class ProjectDetail extends React.Component {
   
 
   render() {
-    const { currentUser, logout, projectsDropdownLabel } = this.props;
+    debugger
+    const { currentUser, logout, project } = this.props;
 
     return (
       <>
-        <TopNavigation 
+        <TopNavigation
           currentUser={currentUser} 
           logout={logout} 
-          projectsDropdownLabel={projectsDropdownLabel}
+          project={project}
         />
         <section className="project-detail-container">
           <nav className="project-detail-sidebar">
@@ -58,9 +59,9 @@ class ProjectDetail extends React.Component {
               <header>
                 <h1>Icebox</h1>
                 <div className="project-detail-actions">
-                  <span><i class="fas fa-plus"></i> Add Story</span>
-                  <span><i class="fas fa-ellipsis-v"></i></span>
-                  <span><i class="fas fa-times"></i></span>
+                  <span><i className="fas fa-plus"></i> Add Story</span>
+                  <span><i className="fas fa-ellipsis-v"></i></span>
+                  <span><i className="fas fa-times"></i></span>
                 </div>
               </header>
               <section className="stories-stack">

@@ -7,14 +7,22 @@ class TopNavigation extends React.Component {
   }
 
   render() {
-    const { currentUser, logout, projectsDropdownLabel } = this.props;
+    const { currentUser, logout, projectsDropdownLabel, project } = this.props;
 
     return (
       <>
         <header className="dashboard-header">
           <nav className="toggle-dropdown project-nav">
             <input type="checkbox" id="project-nav-toggle" />
-            { projectsDropdownLabel }
+            { projectsDropdownLabel || 
+              <label htmlFor="project-nav-toggle" className="toggle-dropdown-label">
+                <div>
+                  <img src={window.logoWhiteSmallURL} alt="Logo" className="logo-small" />
+                  <span className="project-nav-toggle-title">{project.title}</span>
+                  <span className="arrow-down"></span>
+                </div>
+              </label>
+            }
             <ul>
               <li><Link to="/dashboard"><i className="fas fa-home"></i><span>Dashboard</span></Link></li>
             </ul>
