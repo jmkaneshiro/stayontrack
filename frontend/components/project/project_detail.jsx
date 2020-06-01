@@ -4,17 +4,26 @@ import TopNavigation from "../navigation/top_navigation";
 class ProjectDetail extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = ({
+      stories: {}
+    });
   }
 
   componentDidMount() {
-    this.props.fetchProject(this.props.match.params.id);
+    this.props.fetchProject(this.props.match.params.id).then(project => {
+      this.setState({
+        stories: this.props.fetchStories(project.id)
+      });
+    });
   }
 
   
 
   render() {
     const { currentUser, logout, project } = this.props;
-
+    const { stories } = this.state;
+    
     return (
       <>
         {project && <TopNavigation
