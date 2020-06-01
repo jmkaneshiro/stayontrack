@@ -1,29 +1,22 @@
 import React from 'react';
 import TopNavigation from "../navigation/top_navigation";
+import StoryIndexItem from '../story/stories_index_item';
 
 class ProjectDetail extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = ({
-      stories: {}
-    });
   }
 
   componentDidMount() {
     this.props.fetchProject(this.props.match.params.id).then(project => {
-      this.setState({
-        stories: this.props.fetchStories(project.id)
-      });
+        this.props.fetchStories(project.id);
     });
   }
 
   
 
   render() {
-    const { currentUser, logout, project } = this.props;
-    const { stories } = this.state;
-    
+    const { currentUser, logout, project, stories } = this.props;
     return (
       <>
         {project && <TopNavigation
@@ -55,12 +48,17 @@ class ProjectDetail extends React.Component {
                 </div>
               </header>
               <section className="stories-stack">
-                <img src={window.currentBacklogEmptyURL} alt="Prioritized ideas" />
+                <ul>
+                  {stories.map(
+                    story => (<StoryIndexItem key={story.id} story={story} />
+                  ))}
+                </ul>
+                {/* <img src={window.currentBacklogEmptyURL} alt="Prioritized ideas" />
                 <div className="empty-message-text">
                   <p>Stories you are currently working on, and stories you've prioritized
                   to work on next live here.
                   </p>
-                </div>
+                </div> */}
               </section>
             </section>
             <section className="project-detail-bucket icebox">
