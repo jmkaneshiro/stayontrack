@@ -1,6 +1,7 @@
 import React from 'react';
 import TopNavigation from "../navigation/top_navigation";
-import StoryIndexItem from '../story/stories_index_item';
+import StoryIndexItem from "../story/stories_index_item";
+import StoryPreviewItem from "../story/story_preview_item";
 
 class ProjectDetail extends React.Component {
   constructor(props) {
@@ -50,7 +51,7 @@ class ProjectDetail extends React.Component {
               <section className="stories-stack">
                 <ul>
                   {stories.map(
-                    story => (story.project_id === project.id && <StoryIndexItem key={story.id} story={story} />
+                    story => (story.project_id === project.id && <StoryPreviewItem key={story.id} story={story} />
                   ))}
                 </ul>
                 {/* <img src={window.currentBacklogEmptyURL} alt="Prioritized ideas" />
