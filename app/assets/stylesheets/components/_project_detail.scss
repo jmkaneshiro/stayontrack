@@ -47,7 +47,7 @@
   flex-direction: row;
   justify-content: center;
   color: $lightestGray;
-   width: 100%;
+  width: 100%;
 }
 
 .project-detail-bucket {
@@ -56,7 +56,6 @@
   background-color: #484f56;
   border-radius: 2px;
   border: 1px solid #484f56;
-  overflow: scroll;
 }
 
 .project-detail-bucket header {
@@ -84,12 +83,20 @@
   width: auto;
 }
 
+.stories-stack-wrapper {
+  overflow: scroll;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  height: 92%;
+}
+
 .stories-stack {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: auto;
+  height: auto;
 }
 
 .empty-message-text {
