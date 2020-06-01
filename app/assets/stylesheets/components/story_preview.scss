@@ -1,0 +1,93 @@
+.stories-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
+.story-preview-edit-form {
+  background-color: #e9e8e0;
+  width: 100%;
+  margin-top: 0.25rem;
+  max-height: 35vh;
+  overflow: scroll;
+}
+
+.story-preview-edit-form:first-child {
+  margin-top: 0;
+}
+
+/* input and textarea styling */
+.story-text-field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-text-field label {
+  color: black;
+  font-weight: 900;
+  font-size: .75rem;
+}
+
+.story-text-field label {
+  margin-left: 0.25rem;
+}
+
+.story-text-field input, .story-text-field textarea {
+  background-color: white;
+  border-radius: 0.2rem;
+  margin: 0.25rem;
+  border: 0.1rem $pivotalGray solid;
+  min-height: 2rem;
+  padding: 0.25rem;
+  color: black;
+}
+
+.story-text-field input::placeholder {
+  color: $pivotalGray;
+}
+
+#story-name {
+  font-size: 1.25rem;
+} 
+
+/* infobox styling for dropdowns */
+
+.story-info-box-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.story-info-box-wrapper label {
+  color: $pivotalGray;
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+.story-info-box {
+  background-color: white;
+  margin-left: 0.25rem;
+  border-bottom: red solid 0.1rem;
+}
+
+.story-info-box-row {
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 9px;
+  border-left: red solid 0.1rem;
+  border-right: red solid 0.1rem;
+  border-top: red solid 0.1rem;
+}
+
+#story-state-box {
+  background-color: white;
+  margin-right: 0.25rem;
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 9px;
+  border: red solid 0.1rem;
+}

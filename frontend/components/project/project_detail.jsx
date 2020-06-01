@@ -49,7 +49,7 @@ class ProjectDetail extends React.Component {
                 </div>
               </header>
               <section className="stories-stack">
-                <ul>
+                <ul className="stories-list">
                   {stories.map(
                     story => (story.project_id === project.id && <StoryPreviewItem key={story.id} story={story} />
                   ))}
