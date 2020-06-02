@@ -12,9 +12,9 @@ export const fetchStory = (project_id, story_id) => {
   });
 };
 
-export const createStory = (story) => {
+export const createStory = (project_id, story) => {
   return $.ajax({
-    url: "/api/stories",
+    url: `api/projects/${project_id}/stories`,
     method: "POST",
     data: { story }
   });
