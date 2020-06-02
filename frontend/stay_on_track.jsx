@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from "./components/root";
 import * as ProjectApiUtil from "./util/projects_api_util";
-import * as SessionActions from "./actions/session_actions";
 import * as ProjectActions from "./actions/project_actions";
+import * as StoryActions from "./actions/story_actions";
+import * as StoriesApiUtil from "./util/stories_api_util";
 import * as UsersApiUtil from "./util/users_api_util";
-import * as UserActions from "./actions/user_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -28,14 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // TESTING
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.signup = SessionActions.signup;
-  window.login = SessionActions.login;
-  window.logout = SessionActions.logout;
   window.createProject = ProjectActions.createProject;
   window.ApiMembership = ProjectApiUtil.createProjectMembership;
   window.createProjectMembership = ProjectActions.createProjectMembership;
-  window.fetchUsersApi = UsersApiUtil.fetchUsers;
-  window.fetchUsers = UserActions.fetchUsers;
+  window.createStory = StoryActions.createStory;
+  window.ApiCreateStory = StoriesApiUtil.createStory;
   // TESTING
   
   const root = document.getElementById("root");
