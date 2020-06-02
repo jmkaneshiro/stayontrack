@@ -81,6 +81,10 @@
   border-left: $lightGray solid 0.1rem;
   border-right: $lightGray solid 0.1rem;
   border-top: $lightGray solid 0.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #story-state-box {
@@ -107,4 +111,8 @@
 
 .story-info-box-row .fa-cog {
   color: $choreIconGray;
+}
+
+#requester {
+  color: black;
 }

@@ -14,8 +14,6 @@ class ProjectDetail extends React.Component {
     });
   }
 
-  
-
   render() {
     const { currentUser, logout, project, stories } = this.props;
     return (
@@ -50,17 +48,21 @@ class ProjectDetail extends React.Component {
               </header>
               <section className="stories-stack-wrapper">
                 <section className="stories-stack">
-                  <ul className="stories-list">
-                    {stories.map(
-                      story => (story.project_id === project.id && <StoryPreviewItem key={story.id} story={story} />
-                      ))}
-                  </ul>
-                  {/* <img src={window.currentBacklogEmptyURL} alt="Prioritized ideas" />
-                <div className="empty-message-text">
-                  <p>Stories you are currently working on, and stories you've prioritized
-                  to work on next live here.
-                  </p>
-                </div> */}
+                  { stories.length > 0
+                    ? <ul className="stories-list">
+                      {stories.map(
+                        story => (<StoryPreviewItem key={story.id} story={story} />
+                        ))}
+                    </ul>
+                    : <>
+                        <img src={window.currentBacklogEmptyURL} alt="Prioritized ideas" />
+                        <div className="empty-message-text">
+                          <p>Stories you are currently working on, and stories you've prioritized
+                          to work on next live here.
+                          </p>
+                        </div>
+                      </>
+                  }
                 </section>
               </section>
             </section>
