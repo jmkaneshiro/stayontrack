@@ -6,9 +6,7 @@ class Api::StoriesController < ApplicationController
   end
 
   def create
-    debugger
     @story = Story.new(story_params)
-    debugger
     if @story.save
       render "/api/stories/show"
     else
@@ -22,13 +20,6 @@ class Api::StoriesController < ApplicationController
 
   private
   def story_params
-    params.require(:story).permit(
-      :name, 
-      :story_type, 
-      :story_owner_id, 
-      :project_id, 
-      :story_state,
-      # :story_assignee_id,
-      :description)
+    params.require(:story).permit(:name, :story_type, :story_owner_id, :project_id, :story_state)
   end
 end
