@@ -17,6 +17,10 @@ class StoryPreviewItem extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.props.fetchUsers();
+  }
+
   render() {
     const { name, description, story_assignee_id,
       story_state, story_type
@@ -29,17 +33,17 @@ class StoryPreviewItem extends React.Component {
             <input type="text"
               placeholder="Update name of story"
               value={name}
-              id="story-name"
+              className="story-name"
             />
           </div>
           <div className="story-info-box-wrapper">
             <div className="story-info-box">
               <div className="story-info-box-row">
-                { story_type === "feature" && (<i class="fas fa-star"></i>)}
-                {story_type === "bug" && (<i class="fas fa-bug"></i>)}
-                {story_type === "chore" && (<i class="fas fa-cog"></i>)}
+                { story_type === "feature" && (<i className="fas fa-star"></i>)}
+                {story_type === "bug" && (<i className="fas fa-bug"></i>)}
+                {story_type === "chore" && (<i className="fas fa-cog"></i>)}
                 <label htmlFor="story-type">STORY TYPE</label>
-                <select name="story type" id="story-type" value={story_type}>
+                <select name="story type" value={story_type}>
                   <option value="feature">Feature</option>
                   <option value="bug">Bug</option>
                   <option value="chore">Chore</option>
@@ -47,12 +51,12 @@ class StoryPreviewItem extends React.Component {
               </div>
               <div className="story-info-box-row">
                 <label htmlFor="requester">REQUESTER</label>
-                <div id="requester">{this.props.story.story_owner_id}</div>
+                <div id="requester">{this.props.users[this.props.story.story_owner_id].name}</div>
               </div>
             </div>
             <div id="story-state-box">
               <label htmlFor="story-state">STORY STATE</label>
-              <select name="story state" id="story-state" value={story_state}>
+              <select name="story state" value={story_state}>
                 <option value="unassigned">Unassigned</option>
                 <option value="started">Started</option>
                 <option value="finished">Finished</option>
@@ -64,7 +68,6 @@ class StoryPreviewItem extends React.Component {
           <div className="story-text-field story-text-field-wrapper">
             <label htmlFor="description">DESCRIPTION</label>
             <textarea 
-              id="description" 
               cols="30" 
               rows="3"
               placeholder="Add a description"

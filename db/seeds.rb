@@ -14,4 +14,4 @@ demo_project_1_membership_1 = ProjectMembership.create({ member_id: 1, project_i
 demo_project_1_membership_2 = ProjectMembership.create({ member_id: 2, project_id: 1 })
 demo_project_1_feature_1 = Story.create({name: "signup feature", story_type: "feature", story_owner_id: 1, project_id: 1, story_state: "unassigned"})
 demo_project_1_bug_1 = Story.create({name: "login bug", story_type: "bug", story_owner_id: 1, project_id: 1, story_state: "unassigned"})
-demo_project_1_chore_1 = Story.create({name: "backend chore", story_type: "chore", story_owner_id: 1, project_id: 1, story_state: "unassigned"})
+demo_project_1_chore_1 = Story.create({name: "backend chore for Jared", story_type: "chore", story_owner_id: 2, project_id: 1, story_state: "unassigned"})

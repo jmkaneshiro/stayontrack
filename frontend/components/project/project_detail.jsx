@@ -1,7 +1,7 @@
 import React from 'react';
 import TopNavigation from "../navigation/top_navigation";
 import StoryIndexItem from "../story/stories_index_item";
-import StoryPreviewItem from "../story/story_preview_item";
+import StoryPreviewItemContainer from "../story/story_preview_item_container";
 
 class ProjectDetail extends React.Component {
   constructor(props) {
@@ -9,6 +9,7 @@ class ProjectDetail extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchUsers();
     this.props.fetchProject(this.props.match.params.id).then(project => {
         this.props.fetchStories(project.id);
     });
@@ -51,7 +52,7 @@ class ProjectDetail extends React.Component {
                   { stories.length > 0
                     ? <ul className="stories-list">
                       {stories.map(
-                        story => (<StoryPreviewItem key={story.id} story={story} />
+                        story => (<StoryPreviewItemContainer key={`project-id_${story.project_id}_story-id_${story.id}`} story={story} />
                         ))}
                     </ul>
                     : <>
