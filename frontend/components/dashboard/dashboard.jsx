@@ -10,6 +10,7 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     this.props.fetchProjects();
+    this.props.fetchUsers();
   }
 
   render() {

@@ -1,4 +1,9 @@
 class Api::UsersController < ApplicationController
+  def index
+    @users = User.all
+    render :index
+  end
+  
   def create
     @user = User.new(params_with_username_initials)
     if @user.save
