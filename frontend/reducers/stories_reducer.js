@@ -5,7 +5,8 @@ const storiesReducer = (oldState = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_STORIES:
-      return Object.assign({}, oldState, action.stories);
+      // return Object.assign({}, oldState, action.stories);
+      return action.stories;
     case RECEIVE_STORY:
       return Object.assign({}, oldState, { [action.story.id]: action.story });
     default:

@@ -15,8 +15,18 @@ class ProjectDetail extends React.Component {
     });
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params.id !== prevProps.match.params.id) {
+      this.props.fetchProject(this.props.match.params.id).then(project => {
+        this.props.fetchStories(project.id);
+      });
+    }
+  }
+
+
   render() {
     const { currentUser, logout, project, stories } = this.props;
+    // const projectStories = stories.filter(story => story.project_id === project.id);
     return (
       <>
         {project && <TopNavigation
