@@ -52,7 +52,7 @@
   font-size: 1.25rem;
 } 
 
-/* infobox styling for dropdowns */
+/* infobox styling for story-type, story-owner, story-state dropdowns */
 
 .story-info-box-wrapper {
   display: flex;
@@ -70,7 +70,6 @@
 .story-info-box {
   background-color: white;
   margin-left: 0.25rem;
-  border-bottom: $lightGray solid 0.1rem;
 }
 
 .story-info-box-row {
@@ -87,18 +86,22 @@
   align-items: center;
 }
 
-#story-state-box {
-  background-color: white;
-  margin-right: 0.25rem;
-  display: block;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 9px;
-  border: $lightGray solid 0.1rem;
+.story-info-box-row:first-child {
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+
+.story-info-box-row:last-child {
+  border-bottom: $lightGray solid 0.1rem;
 }
 
 .story-info-box-row i {
   margin: 0 0.3rem 0 0;
+}
+
+.story-info-box-row {
+  border-bottom-left-radius: 0.1rem;
+  border-bottom-right-radius: 0.1rem;
 }
 
 .story-info-box-row .fa-star {
@@ -113,6 +116,17 @@
   color: $choreIconGray;
 }
 
-#requester {
+#story-state-box {
+  background-color: white;
+  margin-right: 0.25rem;
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 9px;
+  border: $lightGray solid 0.1rem;
+  border-radius: 0.2rem;
+}
+
+.requester {
   color: black;
 }

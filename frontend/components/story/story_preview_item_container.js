@@ -11,11 +11,4 @@ const mapStateToProps = ({ session, entities: { users } }) => {
   };
 };
 
-const mapDispatchToProps = dispatch => ({
-  fetchUsers: () => dispatch(fetchUsers())
-//   fetchProject: (id) => dispatch(fetchProject(id)),
-//   fetchStories: (projectId) => dispatch(fetchStories(projectId)),
-//   logout: () => dispatch(logout())
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(StoryPreviewItem);
+export default connect(mapStateToProps)(StoryPreviewItem);

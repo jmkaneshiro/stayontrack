@@ -17,11 +17,8 @@ class StoryPreviewItem extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.props.fetchUsers();
-  }
-
   render() {
+    const { users, story } = this.props;
     const { name, description, story_assignee_id,
       story_state, story_type
     } = this.state;
@@ -51,7 +48,7 @@ class StoryPreviewItem extends React.Component {
               </div>
               <div className="story-info-box-row">
                 <label htmlFor="requester">REQUESTER</label>
-                <div id="requester">{this.props.users[this.props.story.story_owner_id].name}</div>
+                <div name="requester" className="requester">{users[story.story_owner_id].name}</div>
               </div>
             </div>
             <div id="story-state-box">
