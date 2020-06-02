@@ -29,7 +29,7 @@ class StoryPreviewItem extends React.Component {
           <div className="story-text-field story-text-field-wrapper">
             <input type="text"
               placeholder="Update name of story"
-              value={name}
+              defaultValue={name || ''}
               className="story-name"
             />
           </div>
@@ -40,7 +40,7 @@ class StoryPreviewItem extends React.Component {
                 {story_type === "bug" && (<i className="fas fa-bug"></i>)}
                 {story_type === "chore" && (<i className="fas fa-cog"></i>)}
                 <label htmlFor="story-type">STORY TYPE</label>
-                <select name="story type" value={story_type}>
+                <select name="story type" defaultValue={story_type || ''}>
                   <option value="feature">Feature</option>
                   <option value="bug">Bug</option>
                   <option value="chore">Chore</option>
@@ -53,7 +53,7 @@ class StoryPreviewItem extends React.Component {
             </div>
             <div id="story-state-box">
               <label htmlFor="story-state">STORY STATE</label>
-              <select name="story state" value={story_state}>
+              <select name="story state" defaultValue={story_state || ''}>
                 <option value="unassigned">Unassigned</option>
                 <option value="started">Started</option>
                 <option value="finished">Finished</option>
@@ -68,7 +68,8 @@ class StoryPreviewItem extends React.Component {
               cols="30" 
               rows="3"
               placeholder="Add a description"
-            >{description}</textarea>
+              defaultValue={description || ''}
+            ></textarea>
           </div>
         </form>
       </>

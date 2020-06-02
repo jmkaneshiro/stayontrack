@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import ProjectDetail from "./project_detail";
 import { fetchProject } from "../../actions/project_actions";
-// import { fetchUsers } from "../../actions/user_actions";
+import { fetchUsers } from "../../actions/user_actions";
 import { selectAllUsers } from "../../reducers/selectors";
 import { fetchStories } from "../../actions/story_actions";
 import { selectAllStories } from "../../reducers/selectors";
