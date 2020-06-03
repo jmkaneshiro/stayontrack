@@ -28,10 +28,10 @@ class ProjectDetail extends React.Component {
     }
   }
 
-
   render() {
     const { currentUser, logout, project, stories } = this.props;
-    // const projectStories = stories.filter(story => story.project_id === project.id);
+    const { storyFormOpen } = this.state;
+
     return (
       <>
         {project && <TopNavigation
@@ -70,7 +70,7 @@ class ProjectDetail extends React.Component {
                         story => (<StoryPreviewItemContainer key={`project-id_${story.project_id}_story-id_${story.id}`} story={story} />
                         ))}
                     </ul>
-                    : <>
+                    : !storyFormOpen && <>
                         <img src={window.currentBacklogEmptyURL} alt="Prioritized ideas" />
                         <div className="empty-message-text">
                           <p>Stories you are currently working on, and stories you've prioritized
@@ -79,7 +79,7 @@ class ProjectDetail extends React.Component {
                         </div>
                       </>
                   }
-                  {this.state.storyFormOpen && project && <StoryPreviewFormContainer project={project} />}
+                  {storyFormOpen && project && <StoryPreviewFormContainer project={project} />}
                 </section>
               </section>
             </section>
