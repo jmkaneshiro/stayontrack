@@ -93,13 +93,21 @@ class StoryPreviewItem extends React.Component {
               defaultValue={description || ''}
             ></textarea>
           </div>
+          <div>
+            <button className="story-action-btn btn btn-white" onClick={this.handleClickPreview}>Cancel</button>
+            <input
+              type="submit"
+              className="story-action-btn btn btn-green"
+              value="Save Changes"
+            />
+          </div>
           </form> :
           <button className="story-preview-closed" onClick={this.handleClickPreview}>
             <div>
               <div>{this.storyTypeIcon(story_type)}</div>
               <div>{name}</div>
             </div>
-            <div>{story_state}</div>
+            <div>State: {story_state[0].toUpperCase() + story_state.slice(1)}</div>
           </button>
         }
       </>
