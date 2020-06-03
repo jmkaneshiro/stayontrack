@@ -13,18 +13,42 @@ class StoryPreviewItem extends React.Component {
       description: description,
       story_assignee_id: story_assignee_id,
       story_state: story_state,
-      story_type: story_type
+      story_type: story_type,
+      isOpen: false
+    };
+
+    this.handleClickPreview = this.handleClickPreview.bind(this);
+  }
+
+  handleClickPreview(e) {
+    e.preventDefault();
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+
+  storyTypeIcon(story_type) {
+    switch (story_type) {
+      case "feature":
+        return <i className="fas fa-star"></i>;
+      case "bug":
+        return <i className="fas fa-bug"></i>;
+      case "chore":
+        return <i className="fas fa-cog"></i>;
+      default:
+        return;
     };
   }
 
   render() {
     const { users, story } = this.props;
     const { name, description, story_assignee_id,
-      story_state, story_type
+      story_state, story_type, isOpen
     } = this.state;
 
     return (
       <>
+        {isOpen ?
         <form className="story-preview-edit-form">
           <div className="story-text-field story-text-field-wrapper">
             <input type="text"
@@ -36,9 +60,7 @@ class StoryPreviewItem extends React.Component {
           <div className="story-info-box-wrapper">
             <div className="story-info-box">
               <div className="story-info-box-row">
-                { story_type === "feature" && (<i className="fas fa-star"></i>)}
-                {story_type === "bug" && (<i className="fas fa-bug"></i>)}
-                {story_type === "chore" && (<i className="fas fa-cog"></i>)}
+                {this.storyTypeIcon(story_type)}
                 <label htmlFor="story-type">STORY TYPE</label>
                 <select name="story type" defaultValue={story_type || ''}>
                   <option value="feature">Feature</option>
@@ -71,7 +93,15 @@ class StoryPreviewItem extends React.Component {
               defaultValue={description || ''}
             ></textarea>
           </div>
-        </form>
+          </form> :
+          <button className="story-preview-closed" onClick={this.handleClickPreview}>
+            <div>
+              <div>{this.storyTypeIcon(story_type)}</div>
+              <div>{name}</div>
+            </div>
+            <div>{story_state}</div>
+          </button>
+        }
       </>
     )
   }
