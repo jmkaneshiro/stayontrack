@@ -9,8 +9,11 @@ class ProjectDetail extends React.Component {
     super(props);
 
     this.state=({
-      storyFormOpen: true
+      storyFormOpen: false
     });
+
+    this.handleClickOpen = this.handleClickOpen.bind(this);
+    this.handleClickClose = this.handleClickClose.bind(this);
   }
 
   componentDidMount() {
@@ -26,6 +29,20 @@ class ProjectDetail extends React.Component {
         this.props.fetchStories(project.id);
       });
     }
+  }
+
+  handleClickOpen(e) {
+    e.preventDefault();
+    this.setState({
+      storyFormOpen: true
+    });
+  }
+
+  handleClickClose(e) {
+    e.preventDefault();
+    this.setState({
+      storyFormOpen: false
+    });
   }
 
   render() {
@@ -57,13 +74,14 @@ class ProjectDetail extends React.Component {
               <header>
                 <h1>Current Iteration/Backlog</h1>
                 <div className="project-detail-actions">
-                  <span><i className="fas fa-plus"></i> Add Story</span>
+                  <button className="story-action-btn btn btn-orange-hover" onClick={this.handleClickOpen }><i className="fas fa-plus"></i> Add Story</button>
                   <span><i className="fas fa-ellipsis-v"></i></span>
                   <span><i className="fas fa-times"></i></span>
                 </div>
               </header>
               <section className="stories-stack-wrapper">
                 <section className="stories-stack">
+                  {storyFormOpen && project && <StoryPreviewFormContainer project={project} handleClickClose={this.handleClickClose} />}
                   { stories.length > 0
                     ? <ul className="stories-list">
                       {stories.map(
@@ -79,7 +97,6 @@ class ProjectDetail extends React.Component {
                         </div>
                       </>
                   }
-                  {storyFormOpen && project && <StoryPreviewFormContainer project={project} />}
                 </section>
               </section>
             </section>
