@@ -26,7 +26,7 @@ class Api::StoriesController < ApplicationController
       :story_owner_id, 
       :project_id, 
       :story_state,
-      # :story_assignee_id,
+      :story_assignee_id,
       :description)
   end
 end

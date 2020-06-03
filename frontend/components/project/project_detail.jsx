@@ -2,10 +2,15 @@ import React from 'react';
 import TopNavigation from "../navigation/top_navigation";
 import StoryIndexItem from "../story/stories_index_item";
 import StoryPreviewItemContainer from "../story/story_preview_item_container";
+import StoryPreviewFormContainer from "../story_form/story_preview_form_container";
 
 class ProjectDetail extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state=({
+      storyFormOpen: true
+    });
   }
 
   componentDidMount() {
@@ -74,6 +79,7 @@ class ProjectDetail extends React.Component {
                         </div>
                       </>
                   }
+                  {this.state.storyFormOpen && project && <StoryPreviewFormContainer project={project} />}
                 </section>
               </section>
             </section>
