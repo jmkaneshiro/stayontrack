@@ -74,7 +74,7 @@ class ProjectDetail extends React.Component {
               <header>
                 <h1>Current Iteration/Backlog</h1>
                 <div className="project-detail-actions">
-                  <button className="dashboard-action-tabs-btn btn btn-orange-hover" onClick={this.handleClickOpen }><i className="fas fa-plus"></i> Add Story</button>
+                  <button className="story-action-btn btn btn-orange-hover" onClick={this.handleClickOpen }><i className="fas fa-plus"></i> Add Story</button>
                   <span><i className="fas fa-ellipsis-v"></i></span>
                   <span><i className="fas fa-times"></i></span>
                 </div>
