@@ -18,6 +18,12 @@ class Api::StoriesController < ApplicationController
     @story = Story.find(params[:id])
   end
 
+  def update
+    @story = Story.find(params[:id])
+    @story.update(story_params)
+    render "/api/stories/show"
+  end
+  
   private
   def story_params
     params.require(:story).permit(
