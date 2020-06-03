@@ -23,7 +23,7 @@ class Api::StoriesController < ApplicationController
     @story.update(story_params)
     render "/api/stories/show"
   end
-  
+
   private
   def story_params
     params.require(:story).permit(

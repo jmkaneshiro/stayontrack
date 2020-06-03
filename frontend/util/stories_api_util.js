@@ -5,17 +5,25 @@ export const fetchStories = (project_id) => {
   });
 };
 
-export const fetchStory = (project_id, story_id) => {
+export const fetchStory = (story) => {
   return $.ajax({
     method: 'GET',
-    url: `api/projects/${project_id}/stories/${story_id}`
+    url: `api/projects/${story.project_id}/stories/${story.id}`
   });
 };
 
-export const createStory = (project_id, story) => {
+export const createStory = (story) => {
   return $.ajax({
-    url: `api/projects/${project_id}/stories`,
+    url: `api/projects/${story.project_id}/stories`,
     method: "POST",
+    data: { story }
+  });
+};
+
+export const updateStory = (story) => {
+  return $.ajax({
+    url: `api/projects/${story.project_id}/stories/${story.id}`,
+    method: "PATCH",
     data: { story }
   });
 };
