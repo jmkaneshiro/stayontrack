@@ -59,14 +59,14 @@ class ProjectDetail extends React.Component {
         <section className="project-detail-container">
           <nav className="project-detail-sidebar">
             <ul className="project-detail-sidebar-options">
-              <li><i className="fas fa-inbox"></i><span>My Work</span></li>
+              {/* <li><i className="fas fa-inbox"></i><span>My Work</span></li> */}
               <li><i className="fas fa-layer-group"></i><span>Current/backlog</span></li>
-              <li><i className="far fa-snowflake"></i><span>Icebox</span></li>
+              {/* <li><i className="far fa-snowflake"></i><span>Icebox</span></li>
               <li><i className="fas fa-check"></i><span>Done</span></li>
               <li><i className="fas fa-exclamation-triangle"></i><span>Blocked</span></li>
               <li><i className="fas fa-shield-alt"></i><span>Epics</span></li>
               <li><i className="fas fa-tag"></i><span>Labels</span></li>
-              <li><i className="fas fa-history"></i><span>Project History</span></li>
+              <li><i className="fas fa-history"></i><span>Project History</span></li> */}
             </ul>
           </nav>
           <section className="project-detail-panels">
@@ -100,11 +100,10 @@ class ProjectDetail extends React.Component {
                 </section>
               </section>
             </section>
-            <section className="project-detail-bucket icebox">
+            {/* <section className="project-detail-bucket icebox">
               <header>
                 <h1>Icebox</h1>
-                <div className="project-detail-actions">
-                  <span><i className="fas fa-plus"></i> Add Story</span>
+                <div className="project-detail-actions"> <span><i className="fas fa-plus"></i> Add Story</span>
                   <span><i className="fas fa-ellipsis-v"></i></span>
                   <span><i className="fas fa-times"></i></span>
                 </div>
@@ -115,7 +114,7 @@ class ProjectDetail extends React.Component {
                   <p>Loose ideas and stories that haven't been prioritized go here.</p>
                 </div>
               </section>
-            </section>
+            </section> */}
           </section>
         </section>
       </>
