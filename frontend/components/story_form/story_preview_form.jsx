@@ -28,9 +28,8 @@ class StoryPreviewForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const story = Object.assign({}, this.state);
-    const projectId = story.project_id;
 
-    this.props.createStory(projectId, story).then(()=> {
+    this.props.createStory(story).then(()=> {
       this.setState({
         name: "",
         description: "",

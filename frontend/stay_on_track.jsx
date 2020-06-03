@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.ApiMembership = ProjectApiUtil.createProjectMembership;
   window.createProjectMembership = ProjectActions.createProjectMembership;
   window.createStory = StoryActions.createStory;
-  window.ApiCreateStory = StoriesApiUtil.createStory;
+  window.updateStory = StoryActions.updateStory;
   // TESTING
   
   const root = document.getElementById("root");
