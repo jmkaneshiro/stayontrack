@@ -41,6 +41,8 @@ class StoryPreviewForm extends React.Component {
         story_type: "feature"
       });
     });
+
+    this.props.handleClickClose(e);
   }
 
   handleCancel (e) {
