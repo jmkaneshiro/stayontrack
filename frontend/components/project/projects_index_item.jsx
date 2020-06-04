@@ -7,9 +7,9 @@ const ProjectsIndexItem = ({ project }) => (
       <div className="project-header">
         <Link to={`/projects/${project.id}`} className="project-title">{project.title}</Link>
         <div className="project-header-actions">
-          <a href=""><i className="far fa-heart"></i></a>
+          {/* <a href=""><i className="far fa-heart"></i></a> */}
           <a href=""><i className="fas fa-user-friends"></i></a>
-          <a href=""><i className="fas fa-cog"></i></a>
+          {/* <a href=""><i className="fas fa-cog"></i></a> */}
         </div>
       </div>
       <section className="analytics">
