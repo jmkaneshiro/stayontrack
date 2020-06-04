@@ -102,7 +102,7 @@ class StoryPreviewForm extends React.Component {
             ></textarea>
           </div>
           <div>
-            <button className="story-action-btn btn btn-white" onClick={this.handleCancel}>Cancel</button>
+            <button className="story-action-btn btn btn-gray" onClick={this.handleCancel}>Cancel</button>
             <input
               type="submit"
               className="story-action-btn btn btn-green"

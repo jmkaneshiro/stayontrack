@@ -21,7 +21,7 @@ class StoryPreviewItem extends React.Component {
       isOpen: false
     };
 
-    this.handleClickPreview = this.handleClickPreview.bind(this);
+    this.handleClickClose = this.handleClickClose.bind(this);
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -63,7 +63,7 @@ class StoryPreviewItem extends React.Component {
     }
   }
 
-  handleClickPreview(e) {
+  handleClickClose(e) {
     e.preventDefault();
     this.setState({
       isOpen: !this.state.isOpen
@@ -146,7 +146,7 @@ class StoryPreviewItem extends React.Component {
             ></textarea>
           </div>
           <div>
-            <button className="story-action-btn btn btn-white" onClick={this.handleClickPreview}>Cancel</button>
+            <button className="story-action-btn btn btn-gray" onClick={this.handleClickClose}>Close</button>
             <input
               type="submit"
               className="story-action-btn btn btn-green"
@@ -154,7 +154,7 @@ class StoryPreviewItem extends React.Component {
             />
           </div>
           </form> :
-          <button className="story-preview-closed" onClick={this.handleClickPreview}>
+          <button className="story-preview-closed" onClick={this.handleClickClose}>
             <div>
               <div>{this.storyTypeIcon(story_type)}</div>
               <div>{name}</div>

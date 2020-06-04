@@ -63,6 +63,17 @@ a {
   border-color: $lightestGray;
 }
 
+.btn-gray {
+  // background-color: $darkGray;
+  color: white;
+  background-color: $darkGray;
+  border-color: $darkestGray;
+}
+
+.btn-gray:hover {
+  background-color: $darkBlue;
+}
+
 .btn-orange {
   background-color: $pivotalOrange;
   color: #ffffff;
