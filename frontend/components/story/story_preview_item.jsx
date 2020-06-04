@@ -107,7 +107,7 @@ class StoryPreviewItem extends React.Component {
                 <label htmlFor="story-type">STORY TYPE</label>
                 <select name="story-type" 
                   defaultValue={story_type || ''}
-                  onChange={this.update("story-type")}
+                  onChange={this.update("story_type")}
                 >
                   <option value="feature">Feature</option>
                   <option value="bug">Bug</option>
@@ -121,7 +121,11 @@ class StoryPreviewItem extends React.Component {
             </div>
             <div id="story-state-box">
               <label htmlFor="story-state">STORY STATE</label>
-              <select name="story state" defaultValue={story_state || ''}>
+              <select 
+                name="story-state" 
+                defaultValue={story_state || ''}
+                onChange={this.update("story_state")}
+                >
                 <option value="unassigned">Unassigned</option>
                 <option value="started">Started</option>
                 <option value="finished">Finished</option>
