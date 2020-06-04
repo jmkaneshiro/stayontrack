@@ -24,7 +24,7 @@ class StoryPreviewItem extends React.Component {
     this.handleClickClose = this.handleClickClose.bind(this);
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);
+    this.handleDeleteModal = this.handleDeleteModal.bind(this);
   }
 
   update(field) {
@@ -71,9 +71,11 @@ class StoryPreviewItem extends React.Component {
     });
   }
 
-  handleDelete(e) {
+  handleDeleteModal(e) {
     e.preventDefault();
-    this.props.deleteStory();
+    this.props.fetchStory().then(()=> {
+      this.props.openModal('delete story');
+    });
   }
 
   storyTypeIcon(story_type) {
@@ -90,7 +92,7 @@ class StoryPreviewItem extends React.Component {
   }
 
   render() {
-    const { users, story } = this.props;
+    const { users, story, openModal } = this.props;
     const { name, description, story_assignee_id,
       story_state, story_type, isOpen
     } = this.state;
@@ -161,7 +163,7 @@ class StoryPreviewItem extends React.Component {
                 />
               </div>
               <div>
-                <button className="story-action-btn btn btn-gray" onClick={this.handleDelete}><i className="far fa-trash-alt"></i></button>
+                <button className="story-action-btn btn btn-gray" onClick={this.handleDeleteModal}><i className="far fa-trash-alt"></i></button>
               </div>
           </section>
           </form> :
