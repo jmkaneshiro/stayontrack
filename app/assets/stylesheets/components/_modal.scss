@@ -1,0 +1,100 @@
+/* all modals */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: $lightestGray;
+  border-radius: 0.5rem;
+  min-width: 40vw;
+}
+
+.modal-form > h1 {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-bottom: 0.1rem solid $lightGray;
+  background-color: white;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  color: $darkestGray;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.modal-form-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: white;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top: 0.1rem solid $lightGray;
+}
+
+/* project form modal */
+.modal-form > label, .modal-form > .account-select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-form .account-select span:last-child {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 14px;
+  padding: 8px 16px;
+  width: 100%;
+  outline: 0;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  margin-top: 8px;
+  border-radius: 3px;
+  border: 1px solid $lightGray;
+  background: white;
+  color: $darkestGray;
+  background: $lightGray;
+}
+
+.modal-form .form-input-label {
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $darkGray;
+}
+
+.modal-form .form-input-field {
+  background-color: white;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 8px 16px;
+  font-weight: normal;
+}
+
+
+/* delete story modal */
+.modal-form > .story-detail-wrapper {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  // border: 1px solid $lightGray;
+  background-color: $backgroundYellow;
+}
+
+.modal-form > .story-detail-wrapper span {
+  margin: 0rem 1rem;
+}
+
+.modal-form .fa-star {
+  color: $featureIconGold;
+}
+
+.modal-form .fa-bug {
+  color: $bugIconRed;
+}
+
+.modal-form .fa-cog {
+  color: $choreIconGray;
+}

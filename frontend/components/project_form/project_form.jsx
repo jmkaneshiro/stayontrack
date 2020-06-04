@@ -33,7 +33,7 @@ class ProjectForm extends React.Component {
 
     return (
       <>
-        <form onSubmit={this.handleSubmit} className="create-project-form">
+        <form onSubmit={this.handleSubmit} className="modal-form">
           <h1>Create a new project</h1>
           <label className="form-input-label">
             <span>Project Name</span>
@@ -48,7 +48,7 @@ class ProjectForm extends React.Component {
             <span>Account</span>
             <span>{currentUser.name}'s Projects</span>
           </div>
-          <div className="modal-form-footer">
+          <div className="modal-form-actions">
             <button 
               className="dashboard-action-tabs-btn btn btn-white"
               onClick={ () => closeModal()} 

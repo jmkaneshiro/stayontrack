@@ -96,6 +96,15 @@ a {
   background-color: $pivotalGreenHover;
 }
 
+.btn-red {
+  background-color: $buttonRed;
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: $buttonRedHover;
+}
+
 .gray-background {
   background-color: #F3F4F4;
 }
