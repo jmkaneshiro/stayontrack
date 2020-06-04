@@ -15,7 +15,7 @@ class Dashboard extends React.Component {
 
   render() {
     const { projects, currentUser, logout, projectsDropdownLabel, openModal } = this.props;
-
+    const myProjects = projects.filter(project => (project.project_owner_id === this.props.currentUser.id || project.project_members.includes(currentUser.id)));
     return (
       <>
         <TopNavigation currentUser={currentUser} logout={logout} projectsDropdownLabel={projectsDropdownLabel}/>
@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
             <div className="dashboard-tabs-wrapper">
               <div className="dashboard-tabs">
                 <div className="dashboard-tab active-tab">Projects</div>
-                <div className="dashboard-tab inactive-tab">Workspaces</div>
+                {/* <div className="dashboard-tab inactive-tab">Workspaces</div> */}
               </div>
               <button 
                 className="dashboard-action-tabs-btn btn btn-green"
@@ -37,24 +37,25 @@ class Dashboard extends React.Component {
           <div className="projects-pane-container">
             <section className="projects-pane">
               <section className="projects-top-menu">
-                <div className="projects-searchbar">
+                {/* <div className="projects-searchbar">
                   <i className="fas fa-search"></i>
                   <input placeholder="Search Active Projects" className="searchbar-input"></input>
                 </div>
                 <div className="projects-quick-dropdown">
                   <span>Active Projects</span>
                   <i className="fas fa-chevron-down"></i>
-                </div>
+                </div> */}
               </section>
               <section className="my-projects">
                 <h1>
-                  <i className="fas fa-bars"></i> <span>My Projects |</span>
-                  <span className="project-count">1</span>
+                  <i className="fas fa-bars"></i> <span>My Projects | </span>
+                  <span className="project-count">{myProjects.length || ""}</span>
                 </h1>
                 <ul className="project-list">
-                  {projects.map(
-                    project => (project.project_owner_id === currentUser.id || project.project_members.includes(currentUser.id)) && 
-                    (<ProjectsIndexItem key={project.id} project={project} />))}
+                  {myProjects.map(
+                    project => 
+                    <ProjectsIndexItem key={project.id} project={project} />
+                  )}
                 </ul>
               </section>
             </section>
