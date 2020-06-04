@@ -111,7 +111,72 @@
   text-align: right;
 }
 
+.user-nav > button {
+  cursor: pointer;
+  background-color: transparent;
+  color: $secondaryBlue;
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  margin-right: 10px;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  border: 0.1rem solid $pivotalBlue;
+  padding: 0.25rem;
+}
+
+.user-nav > button:hover {
+  background-color: $secondaryBlue;
+  color: $pivotalBlue;
+}
+
+// About Developer
+
+.about-developer-wrapper .fas {
+  font-size: 1.5rem;
+  text-align: right;
+  margin: 1rem 1rem 0 0;
+}
+
+.about-developer-wrapper .button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.developer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.developer-info > div {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.developer-info > span {
+  width: 80%;
+  margin: 2rem 0rem;
+}
+
+.developer-info a {
+  text-decoration: underline;
+  color: $pivotalBlue;
+}
+
+.developer-info img {
+  border-radius: 0.2rem;
+  width: 80%;
+}
+
 // Media Queries
+
 
 @media (min-width: 992px) {
   .menu-md {
@@ -136,4 +201,21 @@
     text-align: left;
     vertical-align: center;
   }
+  .developer-info {
+    flex-direction: row;
+    font-size: 1.25rem;
+    height: 50vh;
+  }
+
+  .developer-info > div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .developer-info > span {
+    width: 50%;
+  }
 }
+    
