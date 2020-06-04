@@ -122,7 +122,7 @@ class StoryPreviewItem extends React.Component {
             <div id="story-state-box">
               <label htmlFor="story-state">STORY STATE</label>
               <select 
-                name="story state" 
+                name="story-state" 
                 defaultValue={story_state || ''}
                 onChange={this.update("story_state")}
                 >
