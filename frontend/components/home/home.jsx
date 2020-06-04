@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 const Home = ({ demoLogin }) => (
 
   <>
-    <a className="global-banner" href="https://content.pivotal.io/blog/pivotal-vmware-transforming-
-    how-more-of-the-world-builds-software">StayOnTrack + VMware: <span>Transforming how more of the 
-      world builds software -></span></a>
     <nav className="main-nav">
       <div className="page-container">
         <div className="main-nav-container">
@@ -16,23 +13,26 @@ const Home = ({ demoLogin }) => (
           <ul className="main-nav-options">
             <li>
               <div className="main-nav-dropdown menu-lg">
-                <span>Product <img className="dropdown-arrow" src={window.arrowSmallDropdownURL} alt="Dropdown arrow"/> </span>
+                <span>Portfolio and Other Projects<img className="dropdown-arrow" src={window.arrowSmallDropdownURL} alt="Dropdown arrow"/> </span>
                 <ul>
-                  <li><a href="https://www.pivotaltracker.com/features" target="_blank" className="header-link">Features</a></li>
-                  <li><a href="https://www.pivotaltracker.com/pricing" target="_blank" className="header-link">Pricing</a></li>
-                  <li><a href="https://www.pivotaltracker.com/integrations" target="_blank" className="header-link">Integrations</a></li>
-                  <li><a href="https://www.pivotaltracker.com/enterprise" target="_blank" className="header-link">Enterprise</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div className="main-nav-dropdown menu-lg">
-                <span>Community <img className="dropdown-arrow" src={window.arrowSmallDropdownURL} alt="Dropdown arrow" /></span>
-                <ul>
-                  <li><a href="https://www.pivotaltracker.com/events" target="_blank" className="header-link">Events</a></li>
-                  <li><a href="https://www.pivotaltracker.com/buildtv" target="_blank" className="header-link">BuildTV</a></li>
-                  <li><a href="https://www.pivotaltracker.com/customer-stories" target="_blank" className="header-link">Customer Stories</a></li>
-                  <li><a href="https://www.pivotaltracker.com/consultancies" target="_blank" className="header-link">Consultancy Directory</a></li>
+                  <li><a href="https://jmkaneshiro.github.io/"
+                    target="_blank"
+                    className="header-link"
+                    name="portfolio">
+                    Portfolio</a>
+                  </li>
+                  <li><a href="https://nstockapp.herokuapp.com/" 
+                        target="_blank" 
+                        className="header-link" 
+                        name="instock">
+                        InStock</a>
+                  </li>
+                  <li><a href="https://jmkaneshiro.github.io/squirrels-of-central-park/" 
+                        target="_blank" 
+                        className="header-link" 
+                        name="squirrels-of-central-park">
+                        Squirrels of Central Park</a>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -45,15 +45,24 @@ const Home = ({ demoLogin }) => (
           <div className="main-nav-dropdown btn btn-white-blue-border menu-md">
               <span>Menu<img className="dropdown-arrow" src={window.arrowSmallDropdownURL} alt="Dropdown arrow" /></span>
             <ul>
-              <li><a href="https://www.pivotaltracker.com/features" target="_blank" className="header-link">Features</a></li>
-              <li><a href="https://www.pivotaltracker.com/pricing" target="_blank" className="header-link">Pricing</a></li>
-              <li><a href="https://www.pivotaltracker.com/integrations" target="_blank" className="header-link">Integrations</a></li>
-              <li><a href="https://www.pivotaltracker.com/enterprise" target="_blank" className="header-link">Enterprise</a></li>
-              <li><a href="https://www.pivotaltracker.com/" target="_blank" className="header-link">Cloned Site: Pivotal Tracker</a></li>
-              <li><a href="https://www.pivotaltracker.com/events" target="_blank" className="header-link">Events</a></li>
-              <li><a href="https://www.pivotaltracker.com/buildtv" target="_blank" className="header-link">BuildTV</a></li>
-              <li><a href="https://www.pivotaltracker.com/customer-stories" target="_blank" className="header-link">Customer Stories</a></li>
-              <li><a href="https://www.pivotaltracker.com/consultancies" target="_blank" className="header-link">Consultancy Directory</a></li>
+              <li><a href="https://jmkaneshiro.github.io/"
+                target="_blank"
+                className="header-link"
+                name="portfolio">
+                Portfolio</a>
+              </li>
+              <li><a href="https://nstockapp.herokuapp.com/"
+                target="_blank"
+                className="header-link"
+                name="instock">
+                InStock</a>
+              </li>
+              <li><a href="https://jmkaneshiro.github.io/squirrels-of-central-park/"
+                target="_blank"
+                className="header-link"
+                name="squirrels-of-central-park">
+                Squirrels of Central Park</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -71,13 +80,8 @@ const Home = ({ demoLogin }) => (
               <div className="signup-form-home-box">
                 <h2>Get Started Today!</h2>
                 <form className="signup-form-home">
-                  <label htmlFor="email">Sign up with your email</label>
-                  <input type="email" placeholder="email@domain.com" name="email" className="signup-email" />
-                  <input type="submit" value="Get Started!" />
+                  <button onClick={demoLogin} className="btn btn-orange demo-login-btn">Demo Login</button>
                 </form>
-                <div className="google-sign-in">
-                  or <a>Sign up with Google</a>
-                </div>
               </div>
             </div>
           </div>
@@ -151,14 +155,14 @@ const Home = ({ demoLogin }) => (
               rely on. Tracker's modern workflow helps your team keep the pace and adapt when needs change.
           </h3>
           </div>
-          <div className="text-box">
+          {/* <div className="text-box">
             <a className="text-box-btn" href="https://www.pivotaltracker.com/features" target="_blank">
               Learn how Tracker can help your team
           <span>
                 <img className="arrow-btn" src={window.buttonArrowURL} alt="Arrow pointing to next page" />
               </span>
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className="section-md">
