@@ -9,13 +9,13 @@ class StoryPreviewItem extends React.Component {
 
     this.state= {
       id: id,
-      project_id: project_id,
       name: name,
-      description: description,
-      story_owner_id: story_owner_id,
-      story_assignee_id: story_assignee_id,
-      story_state: story_state,
       story_type: story_type,
+      story_owner_id: story_owner_id,
+      project_id: project_id,
+      story_state: story_state,
+      story_assignee_id: story_assignee_id,
+      description: description,
       created_at: created_at,
       updated_at: updated_at,
       isOpen: false
