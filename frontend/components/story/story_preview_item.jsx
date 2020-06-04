@@ -24,6 +24,7 @@ class StoryPreviewItem extends React.Component {
     this.handleClickClose = this.handleClickClose.bind(this);
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   update(field) {
@@ -68,6 +69,11 @@ class StoryPreviewItem extends React.Component {
     this.setState({
       isOpen: !this.state.isOpen
     });
+  }
+
+  handleDelete(e) {
+    e.preventDefault();
+    this.props.deleteStory();
   }
 
   storyTypeIcon(story_type) {
@@ -145,14 +151,19 @@ class StoryPreviewItem extends React.Component {
               onChange={this.update("description")}
             ></textarea>
           </div>
-          <div>
-            <button className="story-action-btn btn btn-gray" onClick={this.handleClickClose}>Close</button>
-            <input
-              type="submit"
-              className="story-action-btn btn btn-green"
-              value="Save Changes"
-            />
-          </div>
+          <section className="story-form-actions">
+              <div>
+                <button className="story-action-btn btn btn-gray" onClick={this.handleClickClose}>Close</button>
+                <input
+                  type="submit"
+                  className="story-action-btn btn btn-green"
+                  value="Save Changes"
+                />
+              </div>
+              <div>
+                <button className="story-action-btn btn btn-gray" onClick={this.handleDelete}><i className="far fa-trash-alt"></i></button>
+              </div>
+          </section>
           </form> :
           <button className="story-preview-closed" onClick={this.handleClickClose}>
             <div>

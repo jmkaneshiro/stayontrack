@@ -28,11 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // TESTING
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.createProject = ProjectActions.createProject;
   window.ApiMembership = ProjectApiUtil.createProjectMembership;
   window.createProjectMembership = ProjectActions.createProjectMembership;
-  window.createStory = StoryActions.createStory;
-  window.updateStory = StoryActions.updateStory;
+  window.deleteStory = StoryActions.deleteStory;
   // TESTING
   
   const root = document.getElementById("root");
