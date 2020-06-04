@@ -27,7 +27,8 @@
 
 .signup-form-home-box {
   vertical-align: bottom;
-  background-color:white;
+  background-color: $pivotalBlue;
+  border: 3px solid $pivotalOrange;
   box-shadow: 0 0 4px 2px rgba(4,4,4,0.15);
   border-radius: 3px;
   text-align: left;
@@ -35,12 +36,17 @@
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.signup-form-home-box h2 {
+  font-size: 1rem;
+  color: white;
 }
 
 .signup-form-home-container > h2 {
   font-size: 22px;
   margin-bottom: 8px;
-  color: #4a4a4a;
 }
 
 .signup-form-home {
@@ -57,20 +63,6 @@
   margin-bottom: 8px;
 }
 
-.signup-email {
-  font-size: 14px;
-  font-weight: 300;
-  padding: 11px;
-  background-color: #FAFAFA;
-  border-radius: 2px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #CCC;
-  box-shadow: inset 0 0 4px 0 rgba(4,4,4,0.15);
-  flex: auto;
-  margin-right: 8px;
-}
-
 .signup-form-home > input:last-child {
   background-color:$pivotalBlue;
   border-color: $pivotalBlue;
@@ -82,26 +74,6 @@
   font-weight: 400;
   line-height: 1.5;
   padding: 8px 16px;
-}
-
-.google-sign-in {
-  margin-top: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  vertical-align: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.google-sign-in > a {
-  display: block;
-  color: $pivotalBlue;
-  background-image: image_url("marketing/google-sign-in.svg");
-  background-repeat: no-repeat;
-  padding-left: 22px;
-  background-position-y: 2px;
-  background-color: transparent;
-  margin-left: 5px;
 }
 
 // Info fields
@@ -225,7 +197,11 @@ h3.banner-msg {
   }
 
   .signup-form-home-box {
-      margin-left: 64px;
+    margin-left: 64px;
+  }
+
+  .signup-form-home-box h2 {
+    font-size: 1.75rem;
   }
 
   h2.banner-msg {
