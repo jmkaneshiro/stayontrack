@@ -21,11 +21,14 @@ class ProjectForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const project = Object.assign({}, this.state);
-    this.props.closeModal();
-    this.props.createProject(project)
-      .then(newProject => {
-        this.props.history.push(`/projects/${newProject.id}`);
-    });
+    
+    if (project.title !== '') {
+      this.props.closeModal();
+      this.props.createProject(project)
+        .then(newProject => {
+          this.props.history.push(`/projects/${newProject.id}`);
+        });
+    }
   }
 
   render() {
@@ -44,10 +47,10 @@ class ProjectForm extends React.Component {
               onChange={this.update("title")}
             />
           </label>
-          <div className="form-input-label account-select">
+          {/* <div className="form-input-label account-select">
             <span>Account</span>
             <span>{currentUser.name}'s Projects</span>
-          </div>
+          </div> */}
           <div className="modal-form-actions">
             <button 
               className="dashboard-action-tabs-btn btn btn-white"
