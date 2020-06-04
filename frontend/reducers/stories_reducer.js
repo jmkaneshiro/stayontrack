@@ -1,4 +1,4 @@
-import { RECEIVE_STORY, RECEIVE_STORIES } from "../actions/story_actions";
+import { RECEIVE_STORY, RECEIVE_STORIES, REMOVE_STORY } from "../actions/story_actions";
 
 const storiesReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -13,6 +13,10 @@ const storiesReducer = (oldState = {}, action) => {
       // return action.stories;
     case RECEIVE_STORY:
       return Object.assign({}, oldState, { [action.story.id]: action.story });
+    case REMOVE_STORY:
+      nextState = Object.assign({}, oldState);
+      delete nextState[action.story.id];
+      return nextState;
     default:
       return oldState;
   }
