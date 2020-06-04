@@ -32,13 +32,15 @@ class DeleteStory extends React.Component {
 
     return (
       <>
-        <form onSubmit={this.handleSubmit} className="delete-story">
+        <form onSubmit={this.handleSubmit} className="modal-form">
           <h1>Delete Story</h1>
-          <div>{this.storyTypeIcon(story.story_type)} {story.name}</div>
-          <div className="modal-form-footer">
+          <div className="story-detail-wrapper">
+            <div>{this.storyTypeIcon(story.story_type)}<span>{story.name}</span></div>
+          </div>
+          <div className="modal-form-actions">
             <input
               type="submit"
-              className="dashboard-action-tabs-btn btn btn-green"
+              className="dashboard-action-tabs-btn btn btn-red"
               value="Delete"
             />
             <button

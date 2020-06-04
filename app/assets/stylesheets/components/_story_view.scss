@@ -131,15 +131,15 @@
   border-bottom-right-radius: 0.1rem;
 }
 
-.story-info-box-row .fa-star, .story-preview-closed .fa-star {
+.story-preview-edit-form .fa-star, .story-preview-closed .fa-star {
   color: $featureIconGold;
 }
 
-.story-info-box-row .fa-bug, .story-preview-closed .fa-bug {
+.story-preview-edit-form .fa-bug, .story-preview-closed .fa-bug {
   color: $bugIconRed;
 }
 
-.story-info-box-row .fa-cog, .story-preview-closed .fa-cog {
+.story-preview-edit-form .fa-cog, .story-preview-closed .fa-cog {
   color: $choreIconGray;
 }
 
