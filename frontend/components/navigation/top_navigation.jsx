@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { openModal } from "../../actions/modal_actions";
 
 class TopNavigation extends React.Component {
   constructor(props) {
@@ -7,7 +9,7 @@ class TopNavigation extends React.Component {
   }
 
   render() {
-    const { currentUser, logout, projectsDropdownLabel, project } = this.props;
+    const { currentUser, logout, projectsDropdownLabel, project, openModal } = this.props;
 
     return (
       <>
@@ -40,12 +42,9 @@ class TopNavigation extends React.Component {
                 <div>What's New<span className="arrow-down"></span></div>
               </label>
             </div> */}
-            {/* <div className="toggle-dropdown">
-              <input type="checkbox" id="help-toggle" />
-              <label htmlFor="help-toggle" className="toggle-dropdown-label">
-                <div>Help<span className="arrow-down"></span></div>
-              </label>
-            </div> */}
+            <button onClick={() => openModal('about the developer')}>
+              Learn About StayOnTrack's Developer
+            </button>
             <nav className="toggle-dropdown user-profile-dropdown">
               <input type="checkbox" id="user-profile-toggle" />
               <label htmlFor="user-profile-toggle" className="toggle-dropdown-label">
@@ -62,4 +61,8 @@ class TopNavigation extends React.Component {
   }
 }
 
-export default TopNavigation;
+const mapDispatchToProps = dispatch => ({
+  openModal: modal => dispatch(openModal(modal))
+});
+
+export default connect(null, mapDispatchToProps)(TopNavigation);

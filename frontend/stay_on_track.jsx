@@ -4,9 +4,6 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 import * as ProjectApiUtil from "./util/projects_api_util";
 import * as ProjectActions from "./actions/project_actions";
-import * as StoryActions from "./actions/story_actions";
-import * as StoriesApiUtil from "./util/stories_api_util";
-import * as UsersApiUtil from "./util/users_api_util";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -30,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
   window.ApiMembership = ProjectApiUtil.createProjectMembership;
   window.createProjectMembership = ProjectActions.createProjectMembership;
-  window.deleteStory = StoryActions.deleteStory;
   // TESTING
   
   const root = document.getElementById("root");

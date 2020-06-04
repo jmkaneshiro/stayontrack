@@ -3,6 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import ProjectFormContainer from '../project_form/project_form_container';
 import DeleteStoryContainer from "../story/delete_story_container";
+import AboutDeveloper from "../navigation/about_developer";
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -15,6 +16,9 @@ function Modal({ modal, closeModal }) {
       break;
     case 'delete story':
       component = <DeleteStoryContainer />
+      break;
+    case 'about the developer':
+      component = <AboutDeveloper />
       break;
     default:
       return null;
