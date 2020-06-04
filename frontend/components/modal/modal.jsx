@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import ProjectFormContainer from '../project_form/project_form_container';
+import DeleteStoryContainer from "../story/delete_story_container";
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -11,6 +12,9 @@ function Modal({ modal, closeModal }) {
   switch (modal) {
     case 'create project':
       component = <ProjectFormContainer />;
+      break;
+    case 'delete story':
+      component = <DeleteStoryContainer />
       break;
     default:
       return null;
