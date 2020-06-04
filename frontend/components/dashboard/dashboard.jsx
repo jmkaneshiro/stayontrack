@@ -49,7 +49,7 @@ class Dashboard extends React.Component {
               <section className="my-projects">
                 <h1>
                   <i className="fas fa-bars"></i> <span>My Projects | </span>
-                  <span className="project-count">{myProjects.length}</span>
+                  <span className="project-count">{myProjects.length || ""}</span>
                 </h1>
                 <ul className="project-list">
                   {myProjects.map(
