@@ -11,7 +11,7 @@ const mapStateToProps = ({ session, entities: { users } }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  createStory: (projectId, story) => dispatch(createStory(projectId,story))
+  createStory: (story) => dispatch(createStory(story))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(StoryPreviewForm);

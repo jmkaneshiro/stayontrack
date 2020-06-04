@@ -4,20 +4,62 @@ class StoryPreviewItem extends React.Component {
   constructor(props) {
     super(props);
 
-    const { name, description, story_assignee_id, 
-      story_owner_id, story_state, story_type
-    } = this.props.story;
+    const { id, name, story_type, story_owner_id, project_id, story_state, story_assignee_id, description,
+      created_at, updated_at } = this.props.story;
 
     this.state= {
+      id: id,
       name: name,
-      description: description,
-      story_assignee_id: story_assignee_id,
-      story_state: story_state,
       story_type: story_type,
+      story_owner_id: story_owner_id,
+      project_id: project_id,
+      story_state: story_state,
+      story_assignee_id: story_assignee_id,
+      description: description,
+      created_at: created_at,
+      updated_at: updated_at,
       isOpen: false
     };
 
     this.handleClickPreview = this.handleClickPreview.bind(this);
+    this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+
+    const { id, name, story_type, story_owner_id, project_id, story_state, story_assignee_id, description, 
+         created_at, updated_at } = this.state;
+
+    const updatedStory = Object.assign({}, 
+      { id: id }, 
+      { name: name }, 
+      { story_type: story_type },
+      { story_owner_id: story_owner_id },
+      { project_id: project_id },
+      { story_state: story_state },
+      { story_assignee_id: story_assignee_id },
+      { description: description },
+      { created_at: created_at },
+      {updated_at: updated_at}
+    );
+  
+    if (JSON.stringify(this.props.story) !== JSON.stringify(updatedStory)) {
+      this.props.updateStory(updatedStory).then(() => {
+        this.props.fetchStories(this.props.story.project_id).then(() => {
+          this.setState({
+            isOpen: !this.state.isOpen
+          });
+        });
+      });
+    }
   }
 
   handleClickPreview(e) {
@@ -49,11 +91,12 @@ class StoryPreviewItem extends React.Component {
     return (
       <>
         {isOpen ?
-        <form className="story-preview-edit-form">
+          <form onSubmit={this.handleSubmit} className="story-preview-edit-form">
           <div className="story-text-field story-text-field-wrapper">
             <input type="text"
               placeholder="Update name of story"
               defaultValue={name || ''}
+              onChange={this.update("name")}
               className="story-name"
             />
           </div>
@@ -62,7 +105,10 @@ class StoryPreviewItem extends React.Component {
               <div className="story-info-box-row">
                 {this.storyTypeIcon(story_type)}
                 <label htmlFor="story-type">STORY TYPE</label>
-                <select name="story type" defaultValue={story_type || ''}>
+                <select name="story-type" 
+                  defaultValue={story_type || ''}
+                  onChange={this.update("story-type")}
+                >
                   <option value="feature">Feature</option>
                   <option value="bug">Bug</option>
                   <option value="chore">Chore</option>
@@ -91,6 +137,7 @@ class StoryPreviewItem extends React.Component {
               rows="3"
               placeholder="Add a description"
               defaultValue={description || ''}
+              onChange={this.update("description")}
             ></textarea>
           </div>
           <div>
