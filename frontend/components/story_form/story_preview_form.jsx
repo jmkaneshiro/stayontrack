@@ -29,18 +29,7 @@ class StoryPreviewForm extends React.Component {
     e.preventDefault();
     const story = Object.assign({}, this.state);
 
-    this.props.createStory(story).then(()=> {
-      this.setState({
-        name: "",
-        description: "",
-        project_id: this.props.project.id,
-        story_owner_id: this.props.currentUser.id,
-        story_assignee_id: null,
-        story_state: "unassigned",
-        story_type: "feature"
-      });
-    });
-
+    this.props.createStory(story);
     this.props.handleClickClose(e);
   }
 
@@ -113,7 +102,7 @@ class StoryPreviewForm extends React.Component {
             ></textarea>
           </div>
           <div>
-            <button className="story-action-btn btn btn-white" onClick={this.handleCancel}>Cancel</button>
+            <button className="story-action-btn btn btn-gray" onClick={this.handleCancel}>Cancel</button>
             <input
               type="submit"
               className="story-action-btn btn btn-green"
