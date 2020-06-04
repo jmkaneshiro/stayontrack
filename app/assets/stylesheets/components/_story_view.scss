@@ -157,3 +157,15 @@
 .requester {
   color: black;
 }
+
+/* story form action */
+.story-form-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.story-form-actions > div:last-child {
+  margin-right: 0.1rem;
+}
