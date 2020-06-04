@@ -27,3 +27,10 @@ export const updateStory = (story) => {
     data: { story }
   });
 };
+
+export const destroyStory = (story) => {
+  return $.ajax({
+    url: `api/projects/${story.project_id}/stories/${story.id}`,
+    method: "DELETE"
+  });
+};

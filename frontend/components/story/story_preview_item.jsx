@@ -52,13 +52,14 @@ class StoryPreviewItem extends React.Component {
     );
   
     if (JSON.stringify(this.props.story) !== JSON.stringify(updatedStory)) {
-      this.props.updateStory(updatedStory).then(() => {
-        this.props.fetchStories(this.props.story.project_id).then(() => {
-          this.setState({
-            isOpen: !this.state.isOpen
-          });
-        });
-      });
+      this.props.updateStory(updatedStory);
+      // .then(() => {
+      //   this.props.fetchStories(this.props.story.project_id).then(() => {
+      //     this.setState({
+      //       isOpen: !this.state.isOpen
+      //     });
+      //   });
+      // });
     }
   }
 

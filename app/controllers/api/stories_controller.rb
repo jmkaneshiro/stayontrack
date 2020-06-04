@@ -24,6 +24,12 @@ class Api::StoriesController < ApplicationController
     render "/api/stories/show"
   end
 
+  def destroy
+    @story = Story.find(params[:id])
+    @story.destroy
+    render json: @story
+  end
+
   private
   def story_params
     params.require(:story).permit(
