@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
 import { fetchProjects } from "../../actions/project_actions";
 import { fetchUsers } from "../../actions/user_actions";
 import { selectAllUsers } from "../../reducers/selectors";
@@ -20,7 +19,6 @@ const mapStateToProps = ({ session, entities: { users, projects } }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout()),
   openModal: modal => dispatch(openModal(modal)),
   closeModal: () => dispatch(closeModal()),
   fetchProjects: () => dispatch(fetchProjects()),

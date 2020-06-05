@@ -14,14 +14,14 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    const { projects, currentUser, logout, projectsDropdownLabel, openModal } = this.props;
+    const { projects, currentUser, projectsDropdownLabel, openModal } = this.props;
     const myProjects = projects.filter(project => (
       project.project_owner_id === this.props.currentUser.id || 
       project.project_members.includes(currentUser.id)
     ));
     return (
       <>
-        <TopNavigation currentUser={currentUser} logout={logout} projectsDropdownLabel={projectsDropdownLabel}/>
+        <TopNavigation projectsDropdownLabel={projectsDropdownLabel}/>
         <section className="dashboard">
           <div className="dashboard-tabs-container">
             <div className="dashboard-tabs-wrapper">

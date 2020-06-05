@@ -46,16 +46,12 @@ class ProjectDetail extends React.Component {
   }
 
   render() {
-    const { currentUser, logout, project, stories } = this.props;
+    const { project, stories } = this.props;
     const { storyFormOpen } = this.state;
 
     return (
       <>
-        {project && <TopNavigation
-          currentUser={currentUser} 
-          logout={logout} 
-          project={project}
-        />}
+        {project && <TopNavigation project={project}/>}
         <section className="project-detail-container">
           <nav className="project-detail-sidebar">
             <ul className="project-detail-sidebar-options">
