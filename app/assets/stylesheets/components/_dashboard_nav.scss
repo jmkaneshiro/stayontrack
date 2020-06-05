@@ -11,6 +11,12 @@
   border-bottom: 1px black solid;
 }
 
+.dashboard-header .logo {
+  width: 116px;
+  padding: 2px 0px;
+  border: 0px;
+}
+
 //toggle-dropdown
 .toggle-dropdown {
   position: relative;
@@ -64,12 +70,6 @@ input[type=checkbox]{
 
 .toggle-dropdown input[type=checkbox]:checked ~ ul li {
   padding: 2px 16px;
-}
-
-.project-nav .logo {
-  width: 116px;
-  padding: 2px 0px;
-  border: 0px;
 }
 
 .project-nav input[type=checkbox]:checked ~ ul {
