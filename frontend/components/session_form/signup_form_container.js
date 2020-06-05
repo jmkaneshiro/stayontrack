@@ -16,7 +16,7 @@ const mapStateToProps = ({ errors }) => ({
 
 const mapDispatchToProps = dispatch => ({
   processForm: user => dispatch(signup(user)),
-  demoLogin: () => dispatch(login({ email: "demo_user@mailinator.com", password: "password" }))
+  login: user => dispatch(login(user))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
