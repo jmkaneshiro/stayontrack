@@ -38,7 +38,7 @@ const ProtectedProject = ({ component: Component, path, currentUser, exact }) =>
 
 const mapStateToProps = ({ session, entities: { users } }) => {
   return {
-    loggedIn: Boolean(session.id) 
+    loggedIn: Boolean(session.id), 
     currentUser: users[session.id]
   };
 };
