@@ -23,9 +23,9 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
   )} />
 )
 
-const ProtectedProject = ({ component: Component, path, projectMembership, exact }) => (
+const ProtectedProject = ({ component: Component, path, currentUser, exact }) => (
   <Route path={path} exact={exact} render={(props) => (
-    projectMembership ? (
+    currentUser.project_memberships.includes(parseInt(props.match.params.id)) ? (
       <Component {...props} />
     ) : (
         <Redirect to="/unreachable" />
@@ -36,8 +36,7 @@ const ProtectedProject = ({ component: Component, path, projectMembership, exact
 const mapStateToProps = ({ session, entities: { users } }, ownProps) => {
   return { 
     loggedIn: Boolean(session.id),
-    currentUser: users[session.id],
-    projectMembership: users[session.id].project_memberships.includes(parseInt(ownProps.computedMatch.params.id))
+    currentUser: users[session.id]
   };
 };
 
