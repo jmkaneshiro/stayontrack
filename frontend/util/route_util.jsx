@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect, Route, withRouter } from "react-router-dom";
 
 
-const Auth = ({ component: Component, path, loggedIn, exact }) => (
+const Auth = ({ component: Component, path, loggedIn, currentUser, exact }) => (
   <Route path={path} exact={exact} render={(props) => (
     !loggedIn ? (
       <Component {...props} /> 
@@ -13,7 +13,7 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
   )} />
 )
 
-const Protected = ({ component: Component, path, loggedIn, exact }) => (
+const Protected = ({ component: Component, path, loggedIn, currentUser, exact }) => (
   <Route path={path} exact={exact} render={(props) => (
     loggedIn ? (
       <Component {...props} />
@@ -25,6 +25,9 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
 
 const ProtectedProject = ({ component: Component, path, currentUser, exact }) => (
   <Route path={path} exact={exact} render={(props) => (
+    !loggedIn ? (
+      <Redirect to="/login" />
+    ) :
     currentUser.project_memberships.includes(parseInt(props.match.params.id)) ? (
       <Component {...props} />
     ) : (
@@ -33,9 +36,9 @@ const ProtectedProject = ({ component: Component, path, currentUser, exact }) =>
   )} />
 )
 
-const mapStateToProps = ({ session, entities: { users } }, ownProps) => {
-  return { 
-    loggedIn: Boolean(session.id),
+const mapStateToProps = ({ session, entities: { users } }) => {
+  return {
+    loggedIn: Boolean(session.id) 
     currentUser: users[session.id]
   };
 };
