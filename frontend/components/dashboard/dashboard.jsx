@@ -15,7 +15,10 @@ class Dashboard extends React.Component {
 
   render() {
     const { projects, currentUser, logout, projectsDropdownLabel, openModal } = this.props;
-    const myProjects = projects.filter(project => (project.project_owner_id === this.props.currentUser.id || project.project_members.includes(currentUser.id)));
+    const myProjects = projects.filter(project => (
+      project.project_owner_id === this.props.currentUser.id || 
+      project.project_members.includes(currentUser.id)
+    ));
     return (
       <>
         <TopNavigation currentUser={currentUser} logout={logout} projectsDropdownLabel={projectsDropdownLabel}/>
