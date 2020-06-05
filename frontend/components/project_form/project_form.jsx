@@ -23,11 +23,11 @@ class ProjectForm extends React.Component {
     const project = Object.assign({}, this.state);
     
     if (project.title !== '') {
-      this.props.closeModal();
       this.props.createProject(project)
         .then(newProject => {
           this.props.history.push(`/projects/${newProject.id}`);
-        });
+        })
+        .then(() => this.props.closeModal());
     }
   }
 

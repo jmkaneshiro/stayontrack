@@ -25,7 +25,7 @@ class User < ApplicationRecord
     class_name: :Project
 
   has_many :project_memberships,
-    foreign_key: :project_id,
+    foreign_key: :member_id,
     class_name: :ProjectMembership
 
   has_many :stories_owned,
