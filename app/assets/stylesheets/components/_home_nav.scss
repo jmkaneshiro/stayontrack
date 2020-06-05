@@ -139,6 +139,11 @@
   margin: 1rem 1rem 0 0;
 }
 
+.about-developer-wrapper {
+  width: 75vw;
+  font-size: 1.5rem;
+}
+
 .about-developer-wrapper .button-wrapper {
   display: flex;
   flex-direction: row;
@@ -150,7 +155,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
 }
 
 .developer-info > div {
@@ -178,7 +182,7 @@
 // Media Queries
 
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .menu-md {
     display: none;
   }
@@ -201,10 +205,15 @@
     text-align: left;
     vertical-align: center;
   }
+
+  .about-developer-wrapper {
+    width: 60vw;
+    font-size: 1.25rem;
+  }
+
   .developer-info {
     flex-direction: row;
-    font-size: 1.25rem;
-    height: 50vh;
+    margin-bottom: 3rem;
   }
 
   .developer-info > div {
@@ -216,6 +225,11 @@
 
   .developer-info > span {
     width: 50%;
+    margin: 1rem 3rem 1rem 0;
+  }
+
+  .developer-info img {
+    width: 60%;
   }
 }
     

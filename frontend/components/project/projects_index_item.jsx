@@ -12,10 +12,10 @@ const ProjectsIndexItem = ({ project }) => (
           {/* <a href=""><i className="fas fa-cog"></i></a> */}
         </div>
       </div>
-      <section className="analytics">
+      {/* <section className="analytics">
         <div>Velocity 10</div>
         <div>Volatility 0%</div>
-      </section>
+      </section> */}
     </section>
   </li>
 );

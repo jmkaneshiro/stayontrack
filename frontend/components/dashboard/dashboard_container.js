@@ -15,12 +15,7 @@ const mapStateToProps = ({ session, entities: { users, projects } }) => {
     users: selectAllUsers(users),
     projects: selectAllProjects(projects),
     projectsDropdownLabel: 
-      <label htmlFor="project-nav-toggle" className="toggle-dropdown-label">
-        <div>
-          <img src={window.logoWhiteURL} alt="Logo" className="logo" />
-          <span className="arrow-down"></span>
-        </div>
-      </label>
+      <img src={window.logoWhiteURL} alt="Logo" className="logo" />
   };
 };
 

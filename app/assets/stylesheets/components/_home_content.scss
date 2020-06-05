@@ -179,7 +179,7 @@ h3.banner-msg {
 
 // Media Queries
 
-@media (max-width: 592px) {
+@media screen and (max-width: 592px) {
   .info-image {
     order: 1;
   }
@@ -189,7 +189,7 @@ h3.banner-msg {
   }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   h1 {
     font-size: 32px;
     line-height: 40px;
