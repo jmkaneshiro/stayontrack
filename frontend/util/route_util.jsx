@@ -11,7 +11,7 @@ const Auth = ({ component: Component, path, currentUser, exact }) => (
       <Redirect to="/dashboard" />
     )
   )} />
-)
+);
 
 const Protected = ({ component: Component, path, currentUser, exact }) => (
   <Route path={path} exact={exact} render={(props) => (
@@ -21,20 +21,7 @@ const Protected = ({ component: Component, path, currentUser, exact }) => (
         <Redirect to="/login" />
       )
   )} />
-)
-
-const ProtectedProject = ({ component: Component, path, currentUser, exact }) => (
-  <Route path={path} exact={exact} render={(props) => (
-    !currentUser ? (
-      <Redirect to="/login" />
-    ) :
-    currentUser.project_memberships.includes(parseInt(props.match.params.id)) ? (
-      <Component {...props} />
-    ) : (
-        <Redirect to="/unreachable" />
-      )
-  )} />
-)
+);
 
 const mapStateToProps = ({ session, entities: { users } }) => {
   return { 

@@ -14,9 +14,8 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import ProjectDetailContainer from './project/project_detail_container';
-import ProjectPlaceholder from './project/project_placeholder';
 import ProjectMembershipContainer from './project_membership/project_membership_container';
-import { AuthRoute, ProtectedRoute, ProtectedProjectRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
 const App = () => (
@@ -27,8 +26,7 @@ const App = () => (
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute path="/dashboard" component={DashboardContainer} />
-      <ProtectedProjectRoute path="/projects/:id" component={ProjectDetailContainer} />
-      <ProtectedRoute path="/unreachable" component={ProjectPlaceholder} />
+      <ProtectedRoute path="/projects/:id" component={ProjectDetailContainer} />
       {/* <ProtectedRoute path="/projects/:id/memberships" component={ProjectMembershipContainer} /> */}
     </Switch>
     <footer>
