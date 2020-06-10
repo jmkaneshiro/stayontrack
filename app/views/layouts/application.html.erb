@@ -2,8 +2,13 @@
 <html>
   <head>
     <title>Stayontrack</title>
+    <!--- meta tags --->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta property="og:title" content="Stayontrack">
+    <meta property="og:description" content="A pixel-perfect clone of Pivotal Tracker by Jared Kaneshiro">
+    <meta property="og:image" content="<%= image_url 'marketing/meta-image.png' %> ">
+    <meta property="og:url" content="https://stay-on-track-app.herokuapp.com/">
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
