@@ -18,6 +18,12 @@ class Api::ProjectsController < ApplicationController
     render :show
   end
 
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    render json: @story
+  end
+
   private
   def project_params
     params.require(:project).permit(:title, :project_owner_id)
