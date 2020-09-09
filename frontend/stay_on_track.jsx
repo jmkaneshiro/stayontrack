@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
   window.ApiMembership = ProjectApiUtil.createProjectMembership;
   window.createProjectMembership = ProjectActions.createProjectMembership;
+  window.deleteProject = ProjectApiUtil.deleteProject;
   // TESTING
   
   const root = document.getElementById("root");
