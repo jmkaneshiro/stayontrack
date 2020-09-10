@@ -45,7 +45,16 @@ export const updateStory = (story) => dispatch => (
     })
 );
 
-export const deleteStory = (story) => dispatch => (
-  StoryApiUtil.destroyStory(story)
-    .then(story => dispatch(removeStory(story)))
-);
+// export const deleteStory = (story) => dispatch => (
+//   StoryApiUtil.destroyStory(story)
+//     .then(story => dispatch(removeStory(story)))
+// );
+
+export const deleteStory = (story) => dispatch => {
+  return (
+    StoryApiUtil.destroyStory(story)
+      .then(story => {
+        dispatch(removeStory(story));
+      })
+  )
+};
