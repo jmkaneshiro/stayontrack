@@ -2,6 +2,7 @@ import * as ProjectApiUtil from "../util/projects_api_util";
 
 export const RECEIVE_PROJECTS = "RECEIVE_PROJECTS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
+export const REMOVE_PROJECT = "REMOVE_PROJECT";
 
 const receiveProjects = (projects) => ({
   type: RECEIVE_PROJECTS,
@@ -12,6 +13,11 @@ const receiveProject = (project) => ({
   type: RECEIVE_PROJECT,
   project
 });
+
+const removeProject = (project) => ({
+  type: REMOVE_PROJECT,
+  project
+})
 
 export const fetchProjects = () => dispatch => ProjectApiUtil.fetchProjects()
   .then(projects => dispatch(receiveProjects(projects)));
@@ -33,6 +39,15 @@ export const createProject = project => dispatch => (
       return project;
     })
 );
+
+export const deleteProject = id => dispatch => {
+  return (
+    ProjectApiUtil.deleteProject(id)
+      .then(project => {
+        dispatch(removeProject(project));
+      })
+  )
+}; 
 
 export const createProjectMembership = projectMembership => dispatch => {
   return (

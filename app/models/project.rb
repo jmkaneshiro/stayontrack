@@ -15,7 +15,7 @@ class Project < ApplicationRecord
     foreign_key: :project_owner_id,
     class_name: :User
 
-  has_many :project_memberships,
+  has_many :project_memberships, dependent: :destroy,
     foreign_key: :project_id,
     class_name: :ProjectMembership
 
@@ -23,7 +23,7 @@ class Project < ApplicationRecord
     through: :project_memberships,
     source: :member
 
-  has_many :stories,
+  has_many :stories, dependent: :destroy,
     foreign_key: :project_id,
     class_name: :Story
 end

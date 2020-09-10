@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import ProjectsIndexItem from "../project/projects_index_item";
+// import ProjectsIndexItem from "../project/projects_index_item";
 import TopNavigation from '../navigation/top_navigation';
+import ProjectsIndexItemContainer from '../project/projects_index_item_container';
 
 class Dashboard extends React.Component {
   constructor (props) {
@@ -57,7 +58,7 @@ class Dashboard extends React.Component {
                 <ul className="project-list">
                   {myProjects.map(
                     project => 
-                    <ProjectsIndexItem key={project.id} project={project} />
+                      <ProjectsIndexItemContainer key={project.id} project={project} />
                   )}
                 </ul>
               </section>
