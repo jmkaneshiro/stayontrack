@@ -5,7 +5,6 @@ class MembershipForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      available_users: this.props.availableUsers,
       member_id: this.props.availableUsers.length > 0 ? this.props.availableUsers[0].id : null,
       project_id: this.props.project.id
     };
