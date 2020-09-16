@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import ProjectFormContainer from '../project_form/project_form_container';
+import MembershipFormContainer from '../membership_form/membership_form_container';
 import DeleteStoryContainer from "../story/delete_story_container";
 import DeleteProjectContainer from "../project/delete_project_container";
 import AboutDeveloper from "../navigation/about_developer";
@@ -14,6 +15,9 @@ function Modal({ modal, closeModal }) {
   switch (modal) {
     case 'create project':
       component = <ProjectFormContainer />
+      break;
+    case 'create membership':
+      component = <MembershipFormContainer />
       break;
     case 'delete story':
       component = <DeleteStoryContainer />

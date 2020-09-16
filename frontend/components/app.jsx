@@ -14,7 +14,6 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import ProjectDetailContainer from './project/project_detail_container';
-import ProjectMembershipContainer from './project_membership/project_membership_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 

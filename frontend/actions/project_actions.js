@@ -17,7 +17,7 @@ const receiveProject = (project) => ({
 const removeProject = (project) => ({
   type: REMOVE_PROJECT,
   project
-})
+});
 
 export const fetchProjects = () => dispatch => ProjectApiUtil.fetchProjects()
   .then(projects => dispatch(receiveProjects(projects)));
@@ -53,8 +53,7 @@ export const createProjectMembership = projectMembership => dispatch => {
   return (
     ProjectApiUtil.createProjectMembership(projectMembership)
       .then(project => {
-        dispatch(receiveProject(project));
-        return project;
+        dispatch(fetchProject(project.id));
       })
   );
 };
