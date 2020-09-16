@@ -15,7 +15,6 @@ class MembershipForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     const projectMembership = Object.assign({}, this.state);
     this.props.createProjectMembership(projectMembership).then(() => this.props.closeModal());
   }
