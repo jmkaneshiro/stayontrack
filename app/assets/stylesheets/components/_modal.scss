@@ -6,6 +6,7 @@
   background-color: $lightestGray;
   border-radius: 0.5rem;
   min-width: 40vw;
+  list-style-type: circle;
 }
 
 .modal-form > h1 {
@@ -63,6 +64,17 @@
   font-size: 12px;
   font-weight: 600;
   color: $darkGray;
+}
+
+.modal-form li {
+  font-weight: normal;
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-left: 20px;
+}
+
+.modal-form select {
+  margin-left: 20px;
 }
 
 .modal-form .form-input-field {

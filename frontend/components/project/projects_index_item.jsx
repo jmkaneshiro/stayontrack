@@ -6,12 +6,20 @@ class ProjectsIndexItem extends React.Component {
     super(props);
 
     this.handleDeleteModal = this.handleDeleteModal.bind(this);
+    this.handleCreateMembershipModal = this.handleCreateMembershipModal.bind(this);
   };
 
   handleDeleteModal(e) {
     e.preventDefault();
     this.props.fetchProject().then(()=> {
       this.props.openModal('delete project');
+    });
+  }
+
+  handleCreateMembershipModal(e) {
+    e.preventDefault();
+    this.props.fetchProject().then(() => {
+      this.props.openModal('create membership');
     });
   }
 
@@ -25,7 +33,7 @@ class ProjectsIndexItem extends React.Component {
             <Link to={`/projects/${project.id}`} className="project-title">{project.title}</Link>
             <div className="project-header-actions">
               {/* <a href=""><i className="far fa-heart"></i></a> */}
-              <a href=""><i className="fas fa-user-friends"></i></a>
+              <button onClick={this.handleCreateMembershipModal}><i className="fas fa-user-friends"></i></button>
               <button onClick={this.handleDeleteModal}><i className="far fa-trash-alt"></i></button>
             </div>
           </div>
