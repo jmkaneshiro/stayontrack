@@ -1,28 +1,23 @@
-import React from "react";
+import React from 'react';
 import { connect } from 'react-redux';
-import { fetchProjects } from "../../actions/project_actions";
-import { fetchUsers } from "../../actions/user_actions";
-import { selectAllUsers } from "../../reducers/selectors";
-import { selectAllProjects } from "../../reducers/selectors";
+import { fetchProjects } from '../../actions/project_actions';
+import { selectAllProjects } from '../../reducers/selectors';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import Dashboard from './dashboard';
 
-
-const mapStateToProps = ({ session, entities: { users, projects } }) => {
+const mapStateToProps = ({ entities: { projects } }) => {
   return {
-    currentUser: users[session.id],
-    users: selectAllUsers(users),
     projects: selectAllProjects(projects),
-    projectsDropdownLabel: 
+    projectsDropdownLabel: (
       <img src={window.logoWhiteURL} alt="Logo" className="logo" />
+    ),
   };
 };
 
-const mapDispatchToProps = dispatch => ({
-  openModal: modal => dispatch(openModal(modal)),
+const mapDispatchToProps = (dispatch) => ({
+  openModal: (modal) => dispatch(openModal(modal)),
   closeModal: () => dispatch(closeModal()),
   fetchProjects: () => dispatch(fetchProjects()),
-  fetchUsers: () => dispatch(fetchUsers())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
