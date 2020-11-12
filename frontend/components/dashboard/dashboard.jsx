@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-// import ProjectsIndexItem from "../project/projects_index_item";
 import TopNavigation from '../navigation/top_navigation';
 import ProjectsIndexItemContainer from '../project/projects_index_item_container';
 
@@ -11,15 +9,10 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     this.props.fetchProjects();
-    this.props.fetchUsers();
   }
 
   render() {
-    const { projects, currentUser, projectsDropdownLabel, openModal } = this.props;
-    const myProjects = projects.filter(project => (
-      project.project_owner_id === this.props.currentUser.id || 
-      project.project_members.includes(currentUser.id)
-    ));
+    const { projects, projectsDropdownLabel, openModal } = this.props;
     return (
       <>
         <TopNavigation projectsDropdownLabel={projectsDropdownLabel}/>
@@ -53,13 +46,12 @@ class Dashboard extends React.Component {
               <section className="my-projects">
                 <h1>
                   <i className="fas fa-bars"></i> <span>My Projects | </span>
-                  <span className="project-count">{myProjects.length || ""}</span>
+                  <span className="project-count">{projects.length || ""}</span>
                 </h1>
                 <ul className="project-list">
-                  {myProjects.map(
-                    project => 
-                      <ProjectsIndexItemContainer key={project.id} project={project} />
-                  )}
+                  {projects.map((project) => {
+                    <ProjectsIndexItemContainer key={project.id} project={project} /> 
+                  })};
                 </ul>
               </section>
             </section>

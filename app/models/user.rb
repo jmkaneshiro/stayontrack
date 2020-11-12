@@ -28,6 +28,10 @@ class User < ApplicationRecord
     foreign_key: :member_id,
     class_name: :ProjectMembership
 
+  has_many :projects,
+    through: :project_memberships,
+    source: :project
+
   has_many :stories_owned,
     foreign_key: :story_owner_id,
     class_name: :Story
