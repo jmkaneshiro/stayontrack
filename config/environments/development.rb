@@ -59,5 +59,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # Tunnel local host to a custom domain for testing https, see example below
-  config.hosts << "1953a26f9fa9.ngrok.io"
+  # config.hosts << "1953a26f9fa9.ngrok.io"
 end
