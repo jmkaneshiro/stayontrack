@@ -8,6 +8,7 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
+    debugger
     this.props.fetchProjects();
   }
 
@@ -49,7 +50,7 @@ class Dashboard extends React.Component {
                   <span className="project-count">{projects.length || ""}</span>
                 </h1>
                 <ul className="project-list">
-                  {projects.map((project) => {
+                  {projects && projects.map((project) => {
                     <ProjectsIndexItemContainer key={project.id} project={project} /> 
                   })}
                 </ul>
