@@ -49,7 +49,7 @@ class Dashboard extends React.Component {
                   <span className="project-count">{projects.length || ""}</span>
                 </h1>
                 <ul className="project-list">
-                  {projects && projects.map((project) => {
+                  {projects.map((project) => {
                     <ProjectsIndexItemContainer key={project.id} project={project} /> 
                   })}
                 </ul>
