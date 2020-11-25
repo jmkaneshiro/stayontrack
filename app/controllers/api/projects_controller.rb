@@ -15,7 +15,14 @@ class Api::ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    render "/api/projects/show"
+    
+    if @project && @project.members.include?(current_user)
+      render "/api/projects/show"
+    elsif @project && !@project.members.include?(current_user)
+      render json: ["You are not authorized to view this resource. Please contact the owner of this resource to request authorization."], status: 403
+    else
+      render json: ["Project not found"], status: 404
+    end
   end
 
   def destroy

@@ -15,6 +15,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import ProjectDetailContainer from './project/project_detail_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import FullErrorPage from "./error_page/full_page_error";
 
 
 const App = () => (
@@ -26,7 +27,7 @@ const App = () => (
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute path="/dashboard" component={DashboardContainer} />
       <ProtectedRoute path="/projects/:id" component={ProjectDetailContainer} />
-      {/* <ProtectedRoute path="/projects/:id/memberships" component={ProjectMembershipContainer} /> */}
+      <Route path="*" component={FullErrorPage} />
     </Switch>
     <footer>
       <p>Like what you see? <strong>Contact me!</strong></p>

@@ -1,0 +1,27 @@
+$arrow-narrow-left: '%3Csvg%20class%3D%22w-6%20h-6%22%20fill%3D%22none%22%20stroke%3D%22%23256188%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M7%2016l-4-4m0%200l4-4m-4%204h18%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E';
+.full-error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.full-error-page .call-to-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  font-size: 30px;
+  font-weight: 900;
+  text-decoration: underline;
+  color: $primaryBlue;
+}
+.full-error-page .call-to-action .arrow-narrow-left {
+  background-image: url('data:image/svg+xml,#{$arrow-narrow-left}');
+  height: 48px;
+  width: 48px;
+  margin-right: 16px;
+}
+.page-not-found {
+  padding: 30px;
+}
